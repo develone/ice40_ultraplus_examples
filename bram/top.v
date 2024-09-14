@@ -5,7 +5,7 @@
 //and an explicit using the bram primitive in yosys
 //bram cannot be read and written at the same time
 
-module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);
+module top(input CLK, output LED_R, output LED_G, output LED_B);
 
    reg ib_rd_en;
    reg ib_wr_en;
@@ -16,7 +16,7 @@ module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);
    wire ib_valid_out;
 
    implicit_bram implicit_bram_inst(
-    .clk(clk), .rd_en(ib_rd_en), .wr_en(ib_wr_en), .rd_addr(ib_rd_addr), .wr_addr(ib_wr_addr), .data_in(ib_data_in), .data_out(ib_data_out), .valid_out(ib_valid_out)
+    .clk(CLK), .rd_en(ib_rd_en), .wr_en(ib_wr_en), .rd_addr(ib_rd_addr), .wr_addr(ib_wr_addr), .data_in(ib_data_in), .data_out(ib_data_out), .valid_out(ib_valid_out)
    );
 
    reg eb_rd_en;
@@ -58,7 +58,7 @@ module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);
       led = 0;
    end
 
-   always @(posedge clk)
+   always @(posedge CLK)
    begin
 
       ib_rd_en <= 0;
