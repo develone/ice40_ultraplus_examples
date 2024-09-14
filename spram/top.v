@@ -1,7 +1,7 @@
 //Simple test of the spram, use a state machine to write values in ram, then
 //read them. The values written in memory is just the colours of a rgb led
 
-module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);
+module top( input CLK, output LED_R, output LED_G, output LED_B);
 
   reg [7:0] state;
 
@@ -29,7 +29,7 @@ module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);
     .MASKWREN({ram_wren, ram_wren, ram_wren, ram_wren}),
     .WREN(ram_wren),
     .CHIPSELECT(1'b1),
-    .CLOCK(clk),
+    .CLOCK(CLK),
     .STANDBY(1'b0),
     .SLEEP(1'b0),
     .POWEROFF(1'b1),
@@ -42,7 +42,7 @@ module top(input [3:0] SW, input clk, output LED_R, output LED_G, output LED_B);
       counter <= 0;
   end
 
-  always @(posedge clk)
+  always @(posedge CLK)
   begin
 
     ram_wren <= 1'b0;
