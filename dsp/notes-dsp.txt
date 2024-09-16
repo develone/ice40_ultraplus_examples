@@ -34,3 +34,4 @@ Both D2 & D3 go off.
 
 Then D3 green D2 green blue white.
 
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/dsp/make_output.txt/#L1294-L1309
