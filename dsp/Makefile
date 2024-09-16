@@ -1,9 +1,9 @@
 filename = top
-pcf_file = ../common/io.pcf
+pcf_file = pico-ice.pcf
 
 build:
-	yosys -p "synth_ice40 -top top -json $(filename).json" $(filename).v
-	nextpnr-ice40 --up5k --json $(filename).json --pcf $(pcf_file) --asc $(filename).asc
+	yosys -p "synth_ice40 -top top  -json $(filename).json" $(filename).v
+	nextpnr-ice40 --up5k --package sg48 --json $(filename).json --pcf $(pcf_file) --asc $(filename).asc
 	icepack $(filename).asc $(filename).bin
 
 prog:
@@ -13,4 +13,4 @@ prog_flash:
 	iceprog $(filename).bin
 
 clean:
-	rm -rf $(filename).blif $(filename).asc $(filename).bin
+	rm -rf $(filename).blif $(filename).asc $(filename).bin $(filename).uf2
