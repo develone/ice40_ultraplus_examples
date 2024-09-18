@@ -99,3 +99,60 @@ find . -name test-top.uf2
 ./bram/test-top.uf2
 ./spram/test-top.uf2
 
+On a 2nd system pi5-70a
+
+git clone https://github.com/develone/ice40_ultraplus_examples.git -b test-dev
+
+cd ice40_ultraplus_example
+
+cd bram/
+
+make clean ; make ; bin2uf2 -o test-top.uf2 top.bin
+
+ls to see if test-top.uf2 was created.
+
+cd ../dsp/
+
+make clean ; make ; bin2uf2 -o test-top.uf2 top.bin
+
+ls to see if test-top.uf2 was created.
+
+cd ../spram/
+
+make clean ; make ; bin2uf2 -o test-top.uf2 top.bin
+
+cd ../spi
+
+make clean ; make ; bin2uf2 -o test-top.uf2 top.bin
+
+ls to see if test-top.uf2 was created.
+
+cd ../spi_hw/
+
+make clean ; make ; bin2uf2 -o test-top.uf2 top.bin
+
+ls to see if test-top.uf2 was created.
+
+transfer the folder to a system with a pico-ice board for testing.
+
+Test test-top.uf2 files on pico-ice hardware 
+
+scp -r ice40_ultraplus_examples/ pi5-80:~/pi5-70a/ 
+
+cd pi5-70a/ice40_ultraplus_examples/
+
+rm -f /media/devel/pico-ice/test-top.uf2
+
+cp bram/test-top.uf2 /media/devel/pico-ice/ 
+
+rm -f /media/devel/pico-ice/test-top.uf2
+
+cp dsp/test-top.uf2 /media/devel/pico-ice/ 
+
+rm -f /media/devel/pico-ice/test-top.uf2
+
+cp spi/test-top.uf2 /media/devel/pico-ice/ 
+
+rm -f /media/devel/pico-ice/test-top.uf2
+
+cp spi_hw/test-top.uf2 /media/devel/pico-ice/ 
