@@ -29,3 +29,5 @@ chanages to pico-ice.pcf to support ice40_ultraplus_examples/spi & ice40_ultrapl
 > set_io SPI_SCK 15
 > set_io SPI_SS 16
 > #set_io -nowarn ICE_SSN          16
+
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/spi_hw/make_output.txt#L1452-L1467
