@@ -15,3 +15,5 @@ cp test-top.uf2 /media/devel/pico-ice/
 Both D2 & D3 go off. 
 
 Then D3 green D2 red green blue white.
+
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/spram/make_output.txt#L1307-L1322
