@@ -91,3 +91,11 @@ created top.bin
 created test-top.uf2
 created notes_spram.txt
 https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/spram/make_output.txt#L1307-L1322
+
+find . -name test-top.uf2
+./spi_hw/test-top.uf2
+./dsp/test-top.uf2
+./spi/test-top.uf2
+./bram/test-top.uf2
+./spram/test-top.uf2
+
