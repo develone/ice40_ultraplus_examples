@@ -1,0 +1,31 @@
+git clone https://github.com/develone/ice40_ultraplus_examples.git -b test-dev
+
+cd /home/devel/ice40_ultraplus_examples/spi or
+cd /home/devel/ice40_ultraplus_examples/spi_hw
+make clean
+
+make VERBOSE=1 > make_output.txt 2>&1
+
+bin2uf2 -o test-top.uf2 top.bin
+
+rm -f /media/devel/pico-ice/test*.uf2
+
+cp test-top.uf2 /media/devel/pico-ice/
+
+chanages to pico-ice.pcf to support ice40_ultraplus_examples/spi & ice40_ultraplus_examples/spi_hw
+
+
+42,45c42,49
+< set_io -nowarn ICE_SO           14
+< set_io -nowarn ICE_SI           17
+< set_ia -nowarn ICE_SCK          15
+< set_io -nowarn ICE_SSN          16
+---
+> set_io SPI_MOSI 17
+> set_io SPI_MISO 14
+> #set_io -nowarn ICE_SO           14
+> #set_io -nowarn ICE_SI           17
+> #set_io -nowarn ICE_SCK          15
+> set_io SPI_SCK 15
+> set_io SPI_SS 16
+> #set_io -nowarn ICE_SSN          16
