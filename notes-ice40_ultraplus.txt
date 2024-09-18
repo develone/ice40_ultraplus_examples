@@ -1,0 +1,93 @@
+
+This worked was all done on a Raspberry Pi5 with mostly older versions of icestorm, yosys, uf2-utils 
+and nextpnr.
+ 
+icestorm:
+commit d20a5e9001f46262bf0cef220f1a6943946e421d (HEAD -> master, origin/master, origin/HEAD)
+Merge: 5991092 dd2dce8
+Author: myrtle <gatecat@ds0.me>
+Date:   Sat Feb 18 16:37:53 2023 +0100
+
+    Merge pull request #311 from YosysHQ/fix-wasm-compat
+    
+    icebram: fix WebAssembly compatibility
+
+yosys:
+commit b52f6cb1991b7117d23fa119bf808f9fc1849789 (HEAD -> master, origin/master, origin/HEAD)
+Author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Date:   Sat Sep 30 00:14:39 2023 +0000
+
+    Bump version
+
+nextpnr:
+commit e8602fb56dce316be506fb69a12f6380eb113712 (HEAD -> master, origin/master, origin/HEAD)
+Author: rowanG077 <goemansrowan@gmail.com>
+Date:   Thu Sep 28 14:26:13 2023 +0200
+
+    std::numeric_limits<delay_t>::lowest() -> ::min()
+
+uf2-utils:
+commit 3ca6d147efad7e3bcc099805e923e60102d0394b (HEAD -> test-dev, origin/test-dev, origin/main, origin/HEAD)
+Author: Josuah Demangeon <me@josuah.net>
+Date:   Thu Jul 11 15:25:26 2024 +0200
+
+    Makefile: fix a missing variable definition not in C99
+    
+    Fixes #1
+I forked https://github.com/damdoy/ice40_ultraplus_examples.git
+
+Created a new branch test-dev.
+
+These mods should be added as examples to pico-ice-sdk.
+
+Mods done to the following git clone https://github.com/develone/ice40_ultraplus_examples.git -b test-dev
+ bram, spi_hw, spi, dsp, and spram.
+
+bram:
+changed Makefile
+changed top.v
+added make_output.txt
+added pico-ice.pcf
+created top.bin
+created test-top.uf2
+created notes-bram.txt
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/bram/make_output.txt/#L2110-L2127
+
+spi_hw:
+changed Makefile
+changed top.v
+added make_output.txt
+added pico-ice.pcf
+created top.bin
+created test-top.uf2
+created notes-spi_hw.txt
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/spi_hw/make_output.txt#L1452-L1467
+
+spi:
+changed Makefile
+changed top.v
+added make_output.txt
+added pico-ice.pcf
+created top.bin
+created test-top.uf2
+created notes-spi.txt
+
+dsp:
+changed Makefile
+changed top.v
+added make_output.txt
+added pico-ice.pcf
+created top.bin
+created test-top.uf2
+created notes-dsp.txt
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/dsp/make_output.txt/#L1294-L1309
+
+spram:
+changed Makefile
+changed top.v
+added make_output.txt
+added pico-ice.pcf
+created top.bin
+created test-top.uf2
+created notes_spram.txt
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/spram/make_output.txt#L1307-L1322
