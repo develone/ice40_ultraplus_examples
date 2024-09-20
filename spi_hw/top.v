@@ -6,7 +6,7 @@
 //0x06 write vector, the computer will send 4 * 32bit values
 //0x07 read vector, the fpga will send 4 * 32bit values
 
-module top( input CLK, output LED_R, output LED_G, output LED_B, input ICE_SCK, input ICE_SSN, input ICE_SI, output ICE_SO);
+module top( input CLK, output LED_R, output LED_G, output LED_B, input SPI_SCK, input SPI_SS, input SPI_MOSI, output SPI_MISO);
 
    parameter NOP=0, INIT=1, WR_INVERTED=2, WR_LEDS=4, WR_VEC=6, RD_VEC=7;
 
