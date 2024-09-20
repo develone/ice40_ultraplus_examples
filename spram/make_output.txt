@@ -1272,9 +1272,9 @@ Found and reported 0 problems.
 2.50. Executing JSON backend.
 
 Warnings: 10 unique messages, 10 total
-End of script. Logfile hash: 603b0694c3, CPU: user 0.95s system 0.02s, MEM: 18.50 MB peak
+End of script. Logfile hash: 603b0694c3, CPU: user 1.01s system 0.00s, MEM: 20.00 MB peak
 Yosys 0.33+79 (git sha1 b52f6cb19, gcc 12.2.0-14 -fPIC -Os)
-Time spent: 47% 13x read_verilog (0 sec), 18% 1x abc (0 sec), ...
+Time spent: 49% 13x read_verilog (0 sec), 17% 1x abc (0 sec), ...
 nextpnr-ice40 --up5k --package sg48 --json top.json --pcf pico-ice.pcf --asc top.asc
 Info: constrained 'CLK' to bel 'X12/Y31/io1'
 Info: constrained 'LED_G' to bel 'X4/Y31/io0'
@@ -1372,7 +1372,7 @@ Info:     at iteration #11, type ICESTORM_LC: wirelen solved = 596, spread = 699
 Info:     at iteration #11, type SB_GB: wirelen solved = 677, spread = 689, legal = 694; time = 0.00s
 Info:     at iteration #11, type ICESTORM_SPRAM: wirelen solved = 229, spread = 229, legal = 515; time = 0.00s
 Info:     at iteration #11, type ALL: wirelen solved = 60, spread = 127, legal = 720; time = 0.00s
-Info: HeAP Placer Time: 0.07s
+Info: HeAP Placer Time: 0.06s
 Info:   of which solving equations: 0.04s
 Info:   of which spreading cells: 0.01s
 Info:   of which strict legalisation: 0.01s
@@ -1419,9 +1419,9 @@ Info: Setting up routing queue.
 Info: Routing 265 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        270 |        4        239 |    4   239 |         0|       0.45       0.45|
+Info:        270 |        4        239 |    4   239 |         0|       0.06       0.06|
 Info: Routing complete.
-Info: Router1 time 0.45s
+Info: Router1 time 0.06s
 Info: Checksum: 0xe4448b31
 
 Info: Critical path report for clock 'CLK$SB_IO_IN_$glb_clk' (posedge -> posedge):

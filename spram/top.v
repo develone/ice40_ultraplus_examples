@@ -1,6 +1,6 @@
 //Simple test of the spram, use a state machine to write values in ram, then
 //read them. The values written in memory is just the colours of a rgb led
-
+`default_nettype	none
 module top( input CLK, output LED_R, output LED_G, output LED_B);
 
   reg [7:0] state;
