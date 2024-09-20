@@ -1,6 +1,6 @@
 `include "calc.v"
 `include "calc_dsp.v"
-
+`default_nettype	none
 module top( input CLK, output LED_R, output LED_G, output LED_B);
 
    wire correct;
