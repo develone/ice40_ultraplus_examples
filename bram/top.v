@@ -1,6 +1,6 @@
 `include "implicit_bram.v"
 `include "explicit_bram.v"
-
+`default_nettype	none
 //example of a small memory implementation using bram, both inferred with a verilog array
 //and an explicit using the bram primitive in yosys
 //bram cannot be read and written at the same time
@@ -28,7 +28,7 @@ module top(input CLK, output LED_R, output LED_G, output LED_B);
    wire eb_valid_out;
 
    explicit_bram explicit_bram_inst(
-    .clk(clk), .rd_en(eb_rd_en), .wr_en(eb_wr_en), .rd_addr(eb_rd_addr), .wr_addr(eb_wr_addr), .data_in(eb_data_in), .data_out(eb_data_out), .valid_out(eb_valid_out)
+    .clk(CLK), .rd_en(eb_rd_en), .wr_en(eb_wr_en), .rd_addr(eb_rd_addr), .wr_addr(eb_wr_addr), .data_in(eb_data_in), .data_out(eb_data_out), .valid_out(eb_valid_out)
    );
 
    reg [32:0] init;

@@ -94,7 +94,6 @@ Successfully finished Verilog frontend.
 
 2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\top'.
 Generating RTLIL representation for module `\top'.
-top.v:31: Warning: Identifier `\clk' is implicitly declared.
 
 2.3.1. Analyzing design hierarchy..
 Top module:  \top
@@ -288,9 +287,9 @@ Creating decoders for process `\SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40
 Creating decoders for process `\SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:271$170'.
 Creating decoders for process `\implicit_bram.$proc$implicit_bram.v:0$922'.
 Creating decoders for process `\implicit_bram.$proc$implicit_bram.v:17$658'.
-     1/5: $1$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$664
-     2/5: $1$memwr$\memory$implicit_bram.v:23$657_DATA[31:0]$663
-     3/5: $1$memwr$\memory$implicit_bram.v:23$657_ADDR[17:0]$662
+     1/5: $1$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$664
+     2/5: $1$memwr$\memory$implicit_bram.v:23$657_DATA[15:0]$663
+     3/5: $1$memwr$\memory$implicit_bram.v:23$657_ADDR[7:0]$662
      4/5: $0\valid_out[0:0]
      5/5: $0\data_out[15:0]
 Creating decoders for process `\explicit_bram.$proc$explicit_bram.v:0$400'.
@@ -755,8 +754,8 @@ Optimizing module top.
 
 2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 25 unused cells and 646 unused wires.
-<suppressed ~50 debug messages>
+Removed 25 unused cells and 644 unused wires.
+<suppressed ~48 debug messages>
 
 2.10. Executing CHECK pass (checking for obvious problems).
 Checking module top...
@@ -782,9 +781,9 @@ Removed 0 multiplexer ports.
 2.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $flatten\implicit_bram_inst.$procmux$1224:
-      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661
-      New ports: A=1'0, B=1'1, Y=$flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0]
-      New connections: $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [31:1] = { $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[31:0]$661 [0] }
+      Old ports: A=16'0000000000000000, B=16'1111111111111111, Y=$flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661
+      New ports: A=1'0, B=1'1, Y=$flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0]
+      New connections: $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [15:1] = { $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] $flatten\implicit_bram_inst.$0$memwr$\memory$implicit_bram.v:23$657_EN[15:0]$661 [0] }
   Optimizing cells in module \top.
 Performed a total of 1 changes.
 
@@ -891,7 +890,7 @@ Adding SRST signal on $procdff$1377 ($dff) from module top (D = { $procmux$1263_
 Adding SRST signal on $procdff$1376 ($dff) from module top (D = $procmux$1278_Y, Q = \ib_wr_en, rval = 1'1).
 Adding SRST signal on $procdff$1375 ($dff) from module top (D = $procmux$1290_Y, Q = \ib_rd_en, rval = 1'0).
 Adding EN signal on $procdff$1374 ($dff) from module top (D = $add$top.v:78$387_Y, Q = \init).
-Adding EN signal on $flatten\implicit_bram_inst.$procdff$1362 ($dff) from module top (D = $flatten\implicit_bram_inst.$memrd$\memory$implicit_bram.v:26$665_DATA [15:0], Q = \implicit_bram_inst.data_out).
+Adding EN signal on $flatten\implicit_bram_inst.$procdff$1362 ($dff) from module top (D = $flatten\implicit_bram_inst.$memrd$\memory$implicit_bram.v:26$665_DATA, Q = \implicit_bram_inst.data_out).
 
 2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -960,262 +959,262 @@ Optimizing module top.
 2.13.23. Finished OPT passes. (There is nothing left to do.)
 
 2.14. Executing WREDUCE pass (reducing word size of cells).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$666 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$667 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$668 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$669 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$670 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$671 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$672 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$673 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$674 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$675 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$676 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$677 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$678 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$679 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$680 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$681 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$682 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$683 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$684 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$685 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$686 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$687 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$688 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$689 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$690 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$691 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$692 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$693 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$694 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$695 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$696 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$697 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$698 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$699 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$700 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$701 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$702 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$703 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$704 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$705 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$706 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$707 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$708 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$709 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$710 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$711 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$712 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$713 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$714 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$715 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$716 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$717 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$718 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$719 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$720 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$721 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$722 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$723 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$724 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$725 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$726 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$727 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$728 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$729 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$730 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$731 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$732 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$733 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$734 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$735 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$736 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$737 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$738 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$739 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$740 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$741 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$742 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$743 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$744 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$745 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$746 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$747 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$748 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$749 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$750 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$751 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$752 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$753 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$754 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$755 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$756 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$757 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$758 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$759 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$760 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$761 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$762 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$763 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$764 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$765 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$766 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$767 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$768 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$769 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$770 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$771 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$772 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$773 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$774 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$775 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$776 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$777 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$778 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$779 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$780 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$781 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$782 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$783 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$784 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$785 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$786 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$787 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$788 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$789 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$790 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$791 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$792 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$793 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$794 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$795 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$796 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$797 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$798 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$799 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$800 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$801 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$802 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$803 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$804 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$805 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$806 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$807 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$808 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$809 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$810 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$811 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$812 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$813 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$814 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$815 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$816 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$817 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$818 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$819 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$820 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$821 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$822 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$823 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$824 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$825 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$826 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$827 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$828 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$829 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$830 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$831 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$832 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$833 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$834 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$835 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$836 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$837 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$838 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$839 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$840 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$841 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$842 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$843 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$844 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$845 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$846 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$847 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$848 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$849 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$850 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$851 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$852 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$853 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$854 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$855 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$856 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$857 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$858 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$859 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$860 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$861 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$862 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$863 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$864 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$865 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$866 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$867 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$868 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$869 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$870 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$871 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$872 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$873 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$874 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$875 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$876 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$877 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$878 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$879 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$880 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$881 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$882 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$883 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$884 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$885 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$886 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$887 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$888 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$889 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$890 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$891 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$892 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$893 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$894 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$895 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$896 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$897 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$898 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$899 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$900 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$901 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$902 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$903 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$904 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$905 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$906 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$907 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$908 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$909 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$910 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$911 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$912 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$913 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$914 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$915 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$916 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$917 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$918 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$919 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$920 (implicit_bram_inst.memory).
-Removed top 14 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$921 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$666 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$667 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$668 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$669 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$670 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$671 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$672 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$673 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$674 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$675 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$676 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$677 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$678 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$679 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$680 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$681 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$682 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$683 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$684 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$685 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$686 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$687 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$688 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$689 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$690 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$691 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$692 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$693 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$694 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$695 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$696 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$697 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$698 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$699 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$700 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$701 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$702 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$703 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$704 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$705 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$706 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$707 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$708 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$709 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$710 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$711 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$712 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$713 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$714 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$715 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$716 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$717 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$718 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$719 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$720 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$721 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$722 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$723 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$724 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$725 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$726 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$727 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$728 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$729 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$730 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$731 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$732 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$733 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$734 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$735 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$736 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$737 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$738 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$739 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$740 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$741 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$742 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$743 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$744 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$745 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$746 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$747 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$748 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$749 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$750 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$751 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$752 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$753 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$754 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$755 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$756 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$757 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$758 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$759 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$760 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$761 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$762 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$763 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$764 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$765 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$766 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$767 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$768 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$769 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$770 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$771 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$772 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$773 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$774 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$775 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$776 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$777 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$778 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$779 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$780 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$781 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$782 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$783 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$784 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$785 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$786 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$787 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$788 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$789 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$790 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$791 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$792 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$793 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$794 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$795 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$796 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$797 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$798 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$799 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$800 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$801 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$802 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$803 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$804 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$805 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$806 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$807 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$808 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$809 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$810 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$811 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$812 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$813 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$814 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$815 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$816 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$817 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$818 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$819 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$820 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$821 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$822 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$823 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$824 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$825 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$826 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$827 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$828 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$829 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$830 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$831 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$832 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$833 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$834 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$835 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$836 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$837 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$838 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$839 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$840 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$841 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$842 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$843 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$844 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$845 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$846 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$847 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$848 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$849 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$850 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$851 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$852 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$853 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$854 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$855 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$856 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$857 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$858 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$859 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$860 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$861 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$862 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$863 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$864 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$865 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$866 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$867 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$868 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$869 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$870 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$871 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$872 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$873 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$874 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$875 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$876 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$877 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$878 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$879 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$880 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$881 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$882 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$883 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$884 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$885 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$886 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$887 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$888 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$889 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$890 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$891 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$892 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$893 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$894 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$895 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$896 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$897 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$898 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$899 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$900 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$901 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$902 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$903 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$904 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$905 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$906 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$907 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$908 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$909 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$910 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$911 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$912 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$913 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$914 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$915 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$916 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$917 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$918 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$919 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$920 (implicit_bram_inst.memory).
+Removed top 24 address bits (of 32) from memory init port top.$flatten\implicit_bram_inst.$meminit$\memory$implicit_bram.v:11$921 (implicit_bram_inst.memory).
 Removed top 26 bits (of 32) from port B of cell top.$lt$top.v:77$386 ($lt).
 Removed top 31 bits (of 32) from port B of cell top.$add$top.v:78$387 ($add).
 Removed top 31 bits (of 32) from port B of cell top.$add$top.v:80$388 ($add).
@@ -1377,7 +1376,7 @@ Finding unused cells or wires in module \top..
 
 2.25. Executing MEMORY_LIBMAP pass (mapping memories to cells).
 mapping memory top.implicit_bram_inst.memory via $__ICE40_RAM4K_
-<suppressed ~68 debug messages>
+<suppressed ~69 debug messages>
 
 2.26. Executing TECHMAP pass (map to technology primitives).
 
@@ -1392,11 +1391,9 @@ Generating RTLIL representation for module `\$__ICE40_SPRAM_'.
 Successfully finished Verilog frontend.
 
 2.26.3. Continuing TECHMAP pass.
-Using template $paramod$14f3ae77ff1994b59f02d085858f48b2e81447f9\$__ICE40_RAM4K_ for cells of type $__ICE40_RAM4K_.
-Using template $paramod$60a20c381f3018147d769f5fac90f548361828a8\$__ICE40_RAM4K_ for cells of type $__ICE40_RAM4K_.
-Using template $paramod$965cd37c4f499bd0201dd937d820c4096f82006f\$__ICE40_RAM4K_ for cells of type $__ICE40_RAM4K_.
+Using template $paramod$5c111548e3a661b27d7daa249ce269fb00846cb1\$__ICE40_RAM4K_ for cells of type $__ICE40_RAM4K_.
 No more expansions possible.
-<suppressed ~2115 debug messages>
+<suppressed ~28 debug messages>
 
 2.27. Executing ICE40_BRAMINIT pass.
 
@@ -1404,144 +1401,20 @@ No more expansions possible.
 
 2.28.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
-<suppressed ~8852 debug messages>
+<suppressed ~32 debug messages>
 
 2.28.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.28.3. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 0 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
-Setting constant 0-bit at position 1 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
-Setting constant 0-bit at position 2 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
-Setting constant 0-bit at position 3 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
-Setting constant 0-bit at position 4 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
-Setting constant 0-bit at position 5 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
-Setting constant 0-bit at position 6 on $auto$memory_libmap.cc:1625:generate_mux$1463 ($dffe) from module top.
 
 2.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 0 unused cells and 28688 unused wires.
+Removed 0 unused cells and 32 unused wires.
 <suppressed ~1 debug messages>
 
-2.28.5. Rerunning OPT passes. (Removed registers in this run.)
-
-2.28.6. Executing OPT_EXPR pass (perform const folding).
-Optimizing module top.
-
-2.28.7. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\top'.
-Removed a total of 0 cells.
-
-2.28.8. Executing OPT_DFF pass (perform DFF optimizations).
-Adding EN signal on $auto$ff.cc:266:slice$1401 ($dffe) from module top (D = $add$top.v:80$388_Y, Q = \state).
-Setting constant 0-bit at position 3 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 4 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 5 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 6 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 7 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 8 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 9 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 10 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 11 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 12 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 13 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 14 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 15 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 16 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 17 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 18 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 19 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 20 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 21 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 22 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 23 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 24 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 25 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 26 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 27 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 28 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 29 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 30 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 31 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
-Setting constant 0-bit at position 4 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 5 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 6 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 7 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 8 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 9 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 10 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 11 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 12 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 13 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 14 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 15 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 16 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-Setting constant 0-bit at position 17 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
-
-2.28.9. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \top..
-Removed 1 unused cells and 1 unused wires.
-<suppressed ~2 debug messages>
-
-2.28.10. Rerunning OPT passes. (Removed registers in this run.)
-
-2.28.11. Executing OPT_EXPR pass (perform const folding).
-Optimizing module top.
-
-2.28.12. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\top'.
-Removed a total of 0 cells.
-
-2.28.13. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 3 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 4 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 5 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 6 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 7 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 8 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 9 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 10 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 11 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 12 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 13 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 14 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 15 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 16 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 17 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 18 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 19 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 20 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 21 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 22 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 23 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 24 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 25 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 26 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 27 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 28 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 29 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 30 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-Setting constant 0-bit at position 31 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
-
-2.28.14. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \top..
-
-2.28.15. Rerunning OPT passes. (Removed registers in this run.)
-
-2.28.16. Executing OPT_EXPR pass (perform const folding).
-Optimizing module top.
-
-2.28.17. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\top'.
-Removed a total of 0 cells.
-
-2.28.18. Executing OPT_DFF pass (perform DFF optimizations).
-
-2.28.19. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \top..
-
-2.28.20. Finished fast OPT passes.
+2.28.5. Finished fast OPT passes.
 
 2.29. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
 
@@ -1560,11 +1433,10 @@ Running muxtree optimizer on module \top..
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
-<suppressed ~6 debug messages>
+<suppressed ~7 debug messages>
 
 2.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \top.
-    New ctrl vector for $demux cell $auto$memory_libmap.cc:1598:generate_demux$1460: { }
     Consolidated identical input bits for $mux cell $procmux$1251:
       Old ports: A=3'000, B=3'110, Y=$auto$wreduce.cc:461:run$1418 [2:0]
       New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$1418 [1]
@@ -1588,7 +1460,7 @@ Removed 0 multiplexer ports.
       New ports: A={ $procmux$1266_Y [0] $procmux$1266_Y [0] }, B=2'10, Y=$procmux$1269_Y [1:0]
       New connections: $procmux$1269_Y [3:2] = { $procmux$1269_Y [1] $procmux$1269_Y [1] }
   Optimizing cells in module \top.
-Performed a total of 7 changes.
+Performed a total of 5 changes.
 
 2.30.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
@@ -1596,11 +1468,29 @@ Finding identical cells in module `\top'.
 Removed a total of 1 cells.
 
 2.30.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$1401 ($dffe) from module top (D = $add$top.v:80$388_Y, Q = \state).
+Setting constant 0-bit at position 3 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 6 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 7 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 8 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 9 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 10 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 11 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 12 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 13 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 14 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 15 on $auto$mem.cc:1614:emulate_read_first$1447 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
+Setting constant 0-bit at position 6 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
+Setting constant 0-bit at position 7 on $auto$mem.cc:1615:emulate_read_first$1448 ($dff) from module top.
 
 2.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 2032 unused cells and 2162 unused wires.
-<suppressed ~2033 debug messages>
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
 
 2.30.8. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
@@ -1625,6 +1515,19 @@ Removed a total of 0 cells.
 
 2.30.13. Executing OPT_DFF pass (perform DFF optimizations).
 Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1404 ($sdff) from module top.
+Setting constant 0-bit at position 3 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 14 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
+Setting constant 0-bit at position 15 on $auto$mem.cc:1137:emulate_transparency$1451 ($dffe) from module top.
 
 2.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -1651,7 +1554,7 @@ Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.30.20. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$5766 ($dff) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1508 ($dff) from module top.
 
 2.30.21. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -1678,7 +1581,7 @@ Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.30.27. Executing OPT_DFF pass (perform DFF optimizations).
-Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$5768 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1511 ($dffe) from module top.
 
 2.30.28. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -1783,21 +1686,21 @@ Using extmapper simplemap for cells of type $not.
 Using extmapper simplemap for cells of type $ne.
 Using extmapper simplemap for cells of type $reduce_bool.
 Using template $paramod$2877d8f5b951dfe2cf2812c3982e70227536e125\_80_ice40_alu for cells of type $alu.
-Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $sdff.
 Using extmapper simplemap for cells of type $or.
 Using template $paramod$8fe5f404940c1857ddadee593dcb0b9145553013\_80_ice40_alu for cells of type $alu.
 Using extmapper simplemap for cells of type $eq.
 Using extmapper simplemap for cells of type $reduce_and.
 Using extmapper simplemap for cells of type $mux.
 Using extmapper simplemap for cells of type $dffe.
-Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $sdffce.
 Using extmapper simplemap for cells of type $dff.
 Using extmapper simplemap for cells of type $and.
 Using extmapper simplemap for cells of type $reduce_or.
-Using extmapper simplemap for cells of type $xor.
 Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $xor.
 No more expansions possible.
-<suppressed ~176 debug messages>
+<suppressed ~177 debug messages>
 
 2.33. Executing OPT pass (performing simple optimizations).
 
@@ -1814,8 +1717,8 @@ Removed a total of 228 cells.
 
 2.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 47 unused cells and 121 unused wires.
-<suppressed ~48 debug messages>
+Removed 17 unused cells and 107 unused wires.
+<suppressed ~18 debug messages>
 
 2.33.5. Finished fast OPT passes.
 
@@ -1890,8 +1793,8 @@ Successfully finished Verilog frontend.
 2.36.2. Continuing TECHMAP pass.
 Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
 Using template \$_SDFF_PP0_ for cells of type $_SDFF_PP0_.
-Using template \$_SDFF_PP1_ for cells of type $_SDFF_PP1_.
 Using template \$_DFF_P_ for cells of type $_DFF_P_.
+Using template \$_SDFF_PP1_ for cells of type $_SDFF_PP1_.
 Using template \$_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
 No more expansions possible.
 <suppressed ~101 debug messages>
@@ -1956,7 +1859,7 @@ No more expansions possible.
 2.41. Executing ABC pass (technology mapping using ABC).
 
 2.41.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
-Extracted 226 gates and 307 wires to a netlist network with 80 inputs and 49 outputs.
+Extracted 227 gates and 308 wires to a netlist network with 80 inputs and 50 outputs.
 
 2.41.1.1. Executing ABC.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
@@ -1978,20 +1881,20 @@ ABC: + if
 ABC: + mfs2 
 ABC: + lutpack -S 1 
 ABC: + dress <abc-temp-dir>/input.blif 
-ABC: Total number of equiv classes                =      51.
-ABC: Participating nodes from both networks       =     110.
-ABC: Participating nodes from the first network   =      50. (  56.82 % of nodes)
-ABC: Participating nodes from the second network  =      60. (  68.18 % of nodes)
-ABC: Node pairs (any polarity)                    =      50. (  56.82 % of names can be moved)
-ABC: Node pairs (same polarity)                   =      49. (  55.68 % of names can be moved)
-ABC: Total runtime =     0.10 sec
+ABC: Total number of equiv classes                =      59.
+ABC: Participating nodes from both networks       =     124.
+ABC: Participating nodes from the first network   =      58. (  61.70 % of nodes)
+ABC: Participating nodes from the second network  =      66. (  70.21 % of nodes)
+ABC: Node pairs (any polarity)                    =      58. (  61.70 % of names can be moved)
+ABC: Node pairs (same polarity)                   =      51. (  54.26 % of names can be moved)
+ABC: Total runtime =     0.09 sec
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 2.41.1.2. Re-integrating ABC results.
-ABC RESULTS:              $lut cells:       87
+ABC RESULTS:              $lut cells:       93
 ABC RESULTS:        internal signals:      178
 ABC RESULTS:           input signals:       80
-ABC RESULTS:          output signals:       49
+ABC RESULTS:          output signals:       50
 Removing temp directory.
 
 2.42. Executing ICE40_WRAPCARRY pass (wrap carries).
@@ -2025,39 +1928,39 @@ Successfully finished Verilog frontend.
 2.43.2. Continuing TECHMAP pass.
 No more expansions possible.
 <suppressed ~22 debug messages>
-Removed 34 unused cells and 218 unused wires.
+Removed 34 unused cells and 219 unused wires.
 
 2.44. Executing OPT_LUT pass (optimize LUTs).
 Discovering LUTs.
-Number of LUTs:      151
-  1-LUT               37
-  2-LUT                4
-  3-LUT               78
+Number of LUTs:      157
+  1-LUT               38
+  2-LUT                8
+  3-LUT               79
   4-LUT               32
   with \SB_CARRY    (#0)   62
   with \SB_CARRY    (#1)   63
 
 Eliminating LUTs.
-Number of LUTs:      151
-  1-LUT               37
-  2-LUT                4
-  3-LUT               78
+Number of LUTs:      157
+  1-LUT               38
+  2-LUT                8
+  3-LUT               79
   4-LUT               32
   with \SB_CARRY    (#0)   62
   with \SB_CARRY    (#1)   63
 
 Combining LUTs.
-Number of LUTs:      151
-  1-LUT               37
-  2-LUT                4
-  3-LUT               78
+Number of LUTs:      157
+  1-LUT               38
+  2-LUT                8
+  3-LUT               79
   4-LUT               32
   with \SB_CARRY    (#0)   62
   with \SB_CARRY    (#1)   63
 
 Eliminated 0 LUTs.
 Combined 0 LUTs.
-<suppressed ~701 debug messages>
+<suppressed ~724 debug messages>
 
 2.45. Executing TECHMAP pass (map to technology primitives).
 
@@ -2067,34 +1970,34 @@ Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
 2.45.2. Continuing TECHMAP pass.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
-Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
 Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
-Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
-Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
-Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
-Using template $paramod$c5b694ec89d7629b942ccf6a9be1d39e24f8edec\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01100000 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
 Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
 Using template $paramod$6b0849254d6c87461fb93e37cc18f089f61eb912\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$e0bde73e598487237493c8a43ca52c95a3727354\$lut for cells of type $lut.
+Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11110100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod$fc318a7df7fe07fd6e06d67fcbc358e9823ea389\$lut for cells of type $lut.
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000111 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001010 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
-Using template $paramod$424c15b5b7e34c8a2f45ec4095ea9276156c7361\$lut for cells of type $lut.
-Using template $paramod$cd6c4b4da6d8737b72fd2dc8f5d83d8967445809\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100000 for cells of type $lut.
 No more expansions possible.
-<suppressed ~427 debug messages>
-Removed 0 unused cells and 331 unused wires.
+<suppressed ~433 debug messages>
+Removed 0 unused cells and 343 unused wires.
 
 2.46. Executing AUTONAME pass.
-Renamed 4346 objects in module top (27 iterations).
-<suppressed ~362 debug messages>
+Renamed 4773 objects in module top (29 iterations).
+<suppressed ~372 debug messages>
 
 2.47. Executing HIERARCHY pass (managing design hierarchy).
 
@@ -2109,22 +2012,22 @@ Removed 0 unused modules.
 
 === top ===
 
-   Number of wires:                 62
-   Number of wire bits:            611
-   Number of public wires:          62
-   Number of public wire bits:     611
+   Number of wires:                 67
+   Number of wire bits:            582
+   Number of public wires:          67
+   Number of public wire bits:     582
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                326
+   Number of cells:                331
      SB_CARRY                       94
      SB_DFF                          3
      SB_DFFE                        71
      SB_DFFESR                       1
      SB_DFFSR                        3
      SB_DFFSS                        1
-     SB_LUT4                       151
-     SB_RAM40_4K                     2
+     SB_LUT4                       157
+     SB_RAM40_4K                     1
 
 2.49. Executing CHECK pass (checking for obvious problems).
 Checking module top...
@@ -2132,10 +2035,9 @@ Found and reported 0 problems.
 
 2.50. Executing JSON backend.
 
-Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: 706a462252, CPU: user 7.28s system 0.03s, MEM: 105.47 MB peak
+End of script. Logfile hash: cec786d84f, CPU: user 2.05s system 0.01s, MEM: 22.00 MB peak
 Yosys 0.33+79 (git sha1 b52f6cb19, gcc 12.2.0-14 -fPIC -Os)
-Time spent: 27% 7x techmap (2 sec), 23% 29x opt_clean (1 sec), ...
+Time spent: 24% 13x read_verilog (0 sec), 22% 7x techmap (0 sec), ...
 nextpnr-ice40 --up5k --package sg48 --json top.json --pcf pico-ice.pcf --asc top.asc
 Info: constrained 'CLK' to bel 'X12/Y31/io1'
 Info: constrained 'LED_G' to bel 'X4/Y31/io0'
@@ -2145,10 +2047,10 @@ Info: constrained 'LED_R' to bel 'X6/Y31/io0'
 Info: Packing constants..
 Info: Packing IOs..
 Info: Packing LUT-FFs..
-Info:       81 LCs used as LUT4 only
-Info:       70 LCs used as LUT4 and DFF
+Info:       88 LCs used as LUT4 only
+Info:       69 LCs used as LUT4 and DFF
 Info: Packing non-LUT FFs..
-Info:        9 LCs used as DFF only
+Info:       10 LCs used as DFF only
 Info: Packing carries..
 Info:       34 LCs used as CARRY only
 Info: Packing indirect carry+LUT pairs...
@@ -2158,16 +2060,16 @@ Info: Placing PLLs..
 Info: Packing special functions..
 Info: Packing PLLs..
 Info: Promoting globals..
-Info: promoting CLK$SB_IO_IN (fanout 83)
+Info: promoting CLK$SB_IO_IN (fanout 81)
 Info: promoting init_SB_DFFE_Q_E[2] [cen] (fanout 33)
 Info: promoting state_SB_DFFE_Q_E [cen] (fanout 33)
 Info: Constraining chains...
 Info:        3 LCs used to legalise carry chains.
-Info: Checksum: 0xf0d41ffd
+Info: Checksum: 0xd805c17c
 
 Info: Device utilisation:
-Info: 	         ICESTORM_LC:   167/ 5280     3%
-Info: 	        ICESTORM_RAM:     2/   30     6%
+Info: 	         ICESTORM_LC:   174/ 5280     3%
+Info: 	        ICESTORM_RAM:     1/   30     3%
 Info: 	               SB_IO:     4/   96     4%
 Info: 	               SB_GB:     3/    8    37%
 Info: 	        ICESTORM_PLL:     0/    1     0%
@@ -2183,367 +2085,368 @@ Info: 	         SB_RGBA_DRV:     0/    1     0%
 Info: 	      ICESTORM_SPRAM:     0/    4     0%
 
 Info: Placed 4 cells based on constraints.
-Info: Creating initial analytic placement for 74 cells, random placement wirelen = 3449.
-Info:     at initial placer iter 0, wirelen = 75
-Info:     at initial placer iter 1, wirelen = 79
-Info:     at initial placer iter 2, wirelen = 81
-Info:     at initial placer iter 3, wirelen = 65
+Info: Creating initial analytic placement for 80 cells, random placement wirelen = 3592.
+Info:     at initial placer iter 0, wirelen = 94
+Info:     at initial placer iter 1, wirelen = 77
+Info:     at initial placer iter 2, wirelen = 90
+Info:     at initial placer iter 3, wirelen = 76
 Info: Running main analytical placer, max placement attempts per cell = 10000.
-Info:     at iteration #1, type ICESTORM_LC: wirelen solved = 70, spread = 294, legal = 348; time = 0.00s
-Info:     at iteration #1, type SB_GB: wirelen solved = 344, spread = 357, legal = 359; time = 0.00s
-Info:     at iteration #1, type ICESTORM_RAM: wirelen solved = 351, spread = 359, legal = 356; time = 0.00s
-Info:     at iteration #1, type ALL: wirelen solved = 71, spread = 412, legal = 545; time = 0.00s
-Info:     at iteration #2, type ICESTORM_LC: wirelen solved = 118, spread = 444, legal = 499; time = 0.00s
-Info:     at iteration #2, type SB_GB: wirelen solved = 491, spread = 497, legal = 499; time = 0.00s
-Info:     at iteration #2, type ICESTORM_RAM: wirelen solved = 484, spread = 491, legal = 498; time = 0.00s
-Info:     at iteration #2, type ALL: wirelen solved = 95, spread = 435, legal = 475; time = 0.00s
-Info:     at iteration #3, type ICESTORM_LC: wirelen solved = 128, spread = 351, legal = 514; time = 0.00s
-Info:     at iteration #3, type SB_GB: wirelen solved = 506, spread = 512, legal = 514; time = 0.00s
-Info:     at iteration #3, type ICESTORM_RAM: wirelen solved = 501, spread = 518, legal = 524; time = 0.00s
-Info:     at iteration #3, type ALL: wirelen solved = 87, spread = 349, legal = 419; time = 0.00s
-Info:     at iteration #4, type ICESTORM_LC: wirelen solved = 120, spread = 425, legal = 471; time = 0.00s
-Info:     at iteration #4, type SB_GB: wirelen solved = 460, spread = 469, legal = 471; time = 0.00s
-Info:     at iteration #4, type ICESTORM_RAM: wirelen solved = 469, spread = 469, legal = 479; time = 0.00s
-Info:     at iteration #4, type ALL: wirelen solved = 80, spread = 346, legal = 395; time = 0.00s
-Info:     at iteration #5, type ICESTORM_LC: wirelen solved = 122, spread = 385, legal = 429; time = 0.00s
-Info:     at iteration #5, type SB_GB: wirelen solved = 418, spread = 427, legal = 429; time = 0.00s
-Info:     at iteration #5, type ICESTORM_RAM: wirelen solved = 423, spread = 427, legal = 445; time = 0.00s
-Info:     at iteration #5, type ALL: wirelen solved = 88, spread = 286, legal = 373; time = 0.00s
-Info:     at iteration #6, type ICESTORM_LC: wirelen solved = 122, spread = 355, legal = 425; time = 0.00s
-Info:     at iteration #6, type SB_GB: wirelen solved = 412, spread = 421, legal = 425; time = 0.00s
-Info:     at iteration #6, type ICESTORM_RAM: wirelen solved = 417, spread = 424, legal = 433; time = 0.00s
-Info:     at iteration #6, type ALL: wirelen solved = 95, spread = 348, legal = 433; time = 0.00s
-Info:     at iteration #7, type ICESTORM_LC: wirelen solved = 163, spread = 407, legal = 450; time = 0.00s
-Info:     at iteration #7, type SB_GB: wirelen solved = 433, spread = 444, legal = 450; time = 0.00s
-Info:     at iteration #7, type ICESTORM_RAM: wirelen solved = 430, spread = 435, legal = 450; time = 0.00s
-Info:     at iteration #7, type ALL: wirelen solved = 98, spread = 311, legal = 401; time = 0.00s
-Info:     at iteration #8, type ICESTORM_LC: wirelen solved = 169, spread = 397, legal = 444; time = 0.00s
-Info:     at iteration #8, type SB_GB: wirelen solved = 425, spread = 436, legal = 444; time = 0.00s
-Info:     at iteration #8, type ICESTORM_RAM: wirelen solved = 429, spread = 433, legal = 446; time = 0.00s
-Info:     at iteration #8, type ALL: wirelen solved = 124, spread = 311, legal = 403; time = 0.00s
-Info:     at iteration #9, type ICESTORM_LC: wirelen solved = 161, spread = 379, legal = 428; time = 0.00s
-Info:     at iteration #9, type SB_GB: wirelen solved = 409, spread = 420, legal = 428; time = 0.00s
-Info:     at iteration #9, type ICESTORM_RAM: wirelen solved = 412, spread = 422, legal = 464; time = 0.00s
-Info:     at iteration #9, type ALL: wirelen solved = 117, spread = 299, legal = 394; time = 0.00s
-Info:     at iteration #10, type ICESTORM_LC: wirelen solved = 192, spread = 397, legal = 443; time = 0.00s
-Info:     at iteration #10, type SB_GB: wirelen solved = 420, spread = 431, legal = 443; time = 0.00s
-Info:     at iteration #10, type ICESTORM_RAM: wirelen solved = 414, spread = 426, legal = 438; time = 0.00s
-Info:     at iteration #10, type ALL: wirelen solved = 127, spread = 325, legal = 411; time = 0.00s
+Info:     at iteration #1, type ICESTORM_LC: wirelen solved = 62, spread = 493, legal = 522; time = 0.00s
+Info:     at iteration #1, type SB_GB: wirelen solved = 515, spread = 528, legal = 533; time = 0.00s
+Info:     at iteration #1, type ICESTORM_RAM: wirelen solved = 520, spread = 520, legal = 536; time = 0.00s
+Info:     at iteration #1, type ALL: wirelen solved = 96, spread = 468, legal = 510; time = 0.00s
+Info:     at iteration #2, type ICESTORM_LC: wirelen solved = 104, spread = 461, legal = 504; time = 0.00s
+Info:     at iteration #2, type SB_GB: wirelen solved = 497, spread = 502, legal = 504; time = 0.00s
+Info:     at iteration #2, type ICESTORM_RAM: wirelen solved = 487, spread = 487, legal = 494; time = 0.00s
+Info:     at iteration #2, type ALL: wirelen solved = 99, spread = 431, legal = 487; time = 0.00s
+Info:     at iteration #3, type ICESTORM_LC: wirelen solved = 118, spread = 468, legal = 512; time = 0.00s
+Info:     at iteration #3, type SB_GB: wirelen solved = 504, spread = 510, legal = 512; time = 0.00s
+Info:     at iteration #3, type ICESTORM_RAM: wirelen solved = 508, spread = 508, legal = 512; time = 0.00s
+Info:     at iteration #3, type ALL: wirelen solved = 117, spread = 463, legal = 493; time = 0.00s
+Info:     at iteration #4, type ICESTORM_LC: wirelen solved = 130, spread = 478, legal = 518; time = 0.00s
+Info:     at iteration #4, type SB_GB: wirelen solved = 510, spread = 516, legal = 518; time = 0.00s
+Info:     at iteration #4, type ICESTORM_RAM: wirelen solved = 517, spread = 517, legal = 518; time = 0.00s
+Info:     at iteration #4, type ALL: wirelen solved = 96, spread = 399, legal = 440; time = 0.00s
+Info:     at iteration #5, type ICESTORM_LC: wirelen solved = 122, spread = 418, legal = 423; time = 0.00s
+Info:     at iteration #5, type SB_GB: wirelen solved = 412, spread = 421, legal = 423; time = 0.00s
+Info:     at iteration #5, type ICESTORM_RAM: wirelen solved = 418, spread = 418, legal = 428; time = 0.00s
+Info:     at iteration #5, type ALL: wirelen solved = 105, spread = 400, legal = 433; time = 0.00s
+Info:     at iteration #6, type ICESTORM_LC: wirelen solved = 132, spread = 422, legal = 443; time = 0.00s
+Info:     at iteration #6, type SB_GB: wirelen solved = 432, spread = 441, legal = 443; time = 0.00s
+Info:     at iteration #6, type ICESTORM_RAM: wirelen solved = 436, spread = 436, legal = 448; time = 0.00s
+Info:     at iteration #6, type ALL: wirelen solved = 106, spread = 392, legal = 453; time = 0.00s
+Info:     at iteration #7, type ICESTORM_LC: wirelen solved = 132, spread = 427, legal = 450; time = 0.00s
+Info:     at iteration #7, type SB_GB: wirelen solved = 437, spread = 448, legal = 450; time = 0.00s
+Info:     at iteration #7, type ICESTORM_RAM: wirelen solved = 447, spread = 447, legal = 450; time = 0.00s
+Info:     at iteration #7, type ALL: wirelen solved = 106, spread = 461, legal = 512; time = 0.00s
+Info:     at iteration #8, type ICESTORM_LC: wirelen solved = 146, spread = 372, legal = 404; time = 0.00s
+Info:     at iteration #8, type SB_GB: wirelen solved = 393, spread = 402, legal = 404; time = 0.00s
+Info:     at iteration #8, type ICESTORM_RAM: wirelen solved = 398, spread = 398, legal = 404; time = 0.00s
+Info:     at iteration #8, type ALL: wirelen solved = 97, spread = 463, legal = 526; time = 0.00s
+Info:     at iteration #9, type ICESTORM_LC: wirelen solved = 161, spread = 377, legal = 422; time = 0.00s
+Info:     at iteration #9, type SB_GB: wirelen solved = 411, spread = 420, legal = 422; time = 0.00s
+Info:     at iteration #9, type ICESTORM_RAM: wirelen solved = 418, spread = 418, legal = 422; time = 0.00s
+Info:     at iteration #9, type ALL: wirelen solved = 141, spread = 383, legal = 458; time = 0.00s
+Info:     at iteration #10, type ICESTORM_LC: wirelen solved = 165, spread = 382, legal = 442; time = 0.00s
+Info:     at iteration #10, type SB_GB: wirelen solved = 431, spread = 440, legal = 442; time = 0.00s
+Info:     at iteration #10, type ICESTORM_RAM: wirelen solved = 433, spread = 433, legal = 439; time = 0.00s
+Info:     at iteration #10, type ALL: wirelen solved = 146, spread = 382, legal = 445; time = 0.00s
 Info: HeAP Placer Time: 0.10s
 Info:   of which solving equations: 0.08s
 Info:   of which spreading cells: 0.01s
 Info:   of which strict legalisation: 0.00s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 58, wirelen = 373
-Info:   at iteration #5: temp = 0.000000, timing cost = 57, wirelen = 301
-Info:   at iteration #10: temp = 0.000000, timing cost = 54, wirelen = 274
-Info:   at iteration #14: temp = 0.000000, timing cost = 55, wirelen = 272 
-Info: SA placement time 0.05s
+Info:   at iteration #1: temp = 0.000000, timing cost = 62, wirelen = 433
+Info:   at iteration #5: temp = 0.000000, timing cost = 63, wirelen = 323
+Info:   at iteration #10: temp = 0.000000, timing cost = 70, wirelen = 296
+Info:   at iteration #15: temp = 0.000000, timing cost = 71, wirelen = 293
+Info:   at iteration #16: temp = 0.000000, timing cost = 70, wirelen = 289 
+Info: SA placement time 0.06s
 
-Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 34.58 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 35.68 MHz (PASS at 12.00 MHz)
 
-Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>: 6.80 ns
+Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>: 5.79 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [ 54416,  55700) |************************************************************ 
-Info: [ 55700,  56984) | 
-Info: [ 56984,  58268) | 
-Info: [ 58268,  59552) | 
-Info: [ 59552,  60836) | 
-Info: [ 60836,  62120) | 
-Info: [ 62120,  63404) | 
-Info: [ 63404,  64688) | 
-Info: [ 64688,  65972) |+
-Info: [ 65972,  67256) |******+
-Info: [ 67256,  68540) |****+
-Info: [ 68540,  69824) |********** 
-Info: [ 69824,  71108) |*****************+
-Info: [ 71108,  72392) |************+
-Info: [ 72392,  73676) |****************+
-Info: [ 73676,  74960) |***************+
-Info: [ 74960,  76244) |***************+
-Info: [ 76244,  77528) |*************+
-Info: [ 77528,  78812) |***********************+
-Info: [ 78812,  80096) |*********************************+
-Info: Checksum: 0x35cccdbf
+Info: [ 55304,  56543) |************************************************************ 
+Info: [ 56543,  57782) | 
+Info: [ 57782,  59021) | 
+Info: [ 59021,  60260) | 
+Info: [ 60260,  61499) | 
+Info: [ 61499,  62738) | 
+Info: [ 62738,  63977) | 
+Info: [ 63977,  65216) | 
+Info: [ 65216,  66455) |**+
+Info: [ 66455,  67694) |*****+
+Info: [ 67694,  68933) |**+
+Info: [ 68933,  70172) |**********+
+Info: [ 70172,  71411) |**************+
+Info: [ 71411,  72650) |**************+
+Info: [ 72650,  73889) |**************+
+Info: [ 73889,  75128) |**************+
+Info: [ 75128,  76367) |****************+
+Info: [ 76367,  77606) |*****************************+
+Info: [ 77606,  78845) |*******************+
+Info: [ 78845,  80084) |****************************+
+Info: Checksum: 0xa16636c8
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 567 arcs.
+Info: Routing 578 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        625 |       40        501 |   40   501 |         0|       0.06       0.06|
+Info:        633 |       49        500 |   49   500 |         0|       0.08       0.08|
 Info: Routing complete.
-Info: Router1 time 0.06s
-Info: Checksum: 0x18dbc90f
+Info: Router1 time 0.08s
+Info: Checksum: 0xc203eedf
 
 Info: Critical path report for clock 'CLK$SB_IO_IN_$glb_clk' (posedge -> posedge):
 Info: curr total
 Info:  1.4  1.4  Source init_SB_DFFE_Q_32_DFFLC.O
-Info:  1.8  3.2    Net init[0] (1,24) -> (1,24)
+Info:  1.8  3.2    Net init[0] (2,23) -> (2,23)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_LUT4_O_32_LC.I3
 Info:                Defined in:
 Info:                  top.v:78.18-78.26
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
 Info:  0.9  4.0  Source init_SB_DFFE_Q_32_D_SB_LUT4_O_32_LC.O
-Info:  3.0  7.0    Net init_SB_DFFE_Q_32_D[0] (1,24) -> (3,25)
-Info:                Sink $nextpnr_ICESTORM_LC_0.I1
+Info:  1.8  5.8    Net init_SB_DFFE_Q_32_D[0] (2,23) -> (3,24)
+Info:                Sink $nextpnr_ICESTORM_LC_1.I1
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.7  7.7  Source $nextpnr_ICESTORM_LC_0.COUT
-Info:  0.0  7.7    Net $nextpnr_ICESTORM_LC_0$O (3,25) -> (3,25)
+Info:  0.7  6.5  Source $nextpnr_ICESTORM_LC_1.COUT
+Info:  0.0  6.5    Net $nextpnr_ICESTORM_LC_1$O (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_CI$CARRY.CIN
-Info:  0.3  7.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_CI$CARRY.COUT
-Info:  0.0  7.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[1] (3,25) -> (3,25)
+Info:  0.3  6.7  Source init_SB_DFFE_Q_32_D_SB_CARRY_CI$CARRY.COUT
+Info:  0.0  6.7    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[1] (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_9$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3  8.2  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_9$CARRY.COUT
-Info:  0.0  8.2    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[2] (3,25) -> (3,25)
+Info:  0.3  7.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_9$CARRY.COUT
+Info:  0.0  7.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[2] (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_6$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3  8.5  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_6$CARRY.COUT
-Info:  0.0  8.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[3] (3,25) -> (3,25)
+Info:  0.3  7.3  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_6$CARRY.COUT
+Info:  0.0  7.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[3] (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_5$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3  8.8  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_5$CARRY.COUT
-Info:  0.0  8.8    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[4] (3,25) -> (3,25)
+Info:  0.3  7.6  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_5$CARRY.COUT
+Info:  0.0  7.6    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[4] (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_4$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3  9.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_4$CARRY.COUT
-Info:  0.0  9.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[5] (3,25) -> (3,25)
+Info:  0.3  7.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_4$CARRY.COUT
+Info:  0.0  7.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[5] (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_3$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3  9.3  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_3$CARRY.COUT
-Info:  0.0  9.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[6] (3,25) -> (3,25)
+Info:  0.3  8.1  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_3$CARRY.COUT
+Info:  0.0  8.1    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[6] (3,24) -> (3,24)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_2$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3  9.6  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_2$CARRY.COUT
-Info:  0.6 10.2    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[7] (3,25) -> (3,26)
+Info:  0.3  8.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_2$CARRY.COUT
+Info:  0.6  9.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[7] (3,24) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_1$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 10.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_1$CARRY.COUT
-Info:  0.0 10.4    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[8] (3,26) -> (3,26)
+Info:  0.3  9.2  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_1$CARRY.COUT
+Info:  0.0  9.2    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[8] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 10.7  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1$CARRY.COUT
-Info:  0.0 10.7    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[9] (3,26) -> (3,26)
+Info:  0.3  9.5  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1$CARRY.COUT
+Info:  0.0  9.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[9] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_29$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 11.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_29$CARRY.COUT
-Info:  0.0 11.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[10] (3,26) -> (3,26)
+Info:  0.3  9.8  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_29$CARRY.COUT
+Info:  0.0  9.8    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[10] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_28$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 11.3  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_28$CARRY.COUT
-Info:  0.0 11.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[11] (3,26) -> (3,26)
+Info:  0.3 10.1  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_28$CARRY.COUT
+Info:  0.0 10.1    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[11] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_27$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 11.5  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_27$CARRY.COUT
-Info:  0.0 11.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[12] (3,26) -> (3,26)
+Info:  0.3 10.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_27$CARRY.COUT
+Info:  0.0 10.4    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[12] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_26$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 11.8  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_26$CARRY.COUT
-Info:  0.0 11.8    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[13] (3,26) -> (3,26)
+Info:  0.3 10.6  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_26$CARRY.COUT
+Info:  0.0 10.6    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[13] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_25$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 12.1  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_25$CARRY.COUT
-Info:  0.0 12.1    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[14] (3,26) -> (3,26)
+Info:  0.3 10.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_25$CARRY.COUT
+Info:  0.0 10.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[14] (3,25) -> (3,25)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_24$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 12.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_24$CARRY.COUT
-Info:  0.6 12.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[15] (3,26) -> (3,27)
+Info:  0.3 11.2  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_24$CARRY.COUT
+Info:  0.6 11.7    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[15] (3,25) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_23$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 13.2  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_23$CARRY.COUT
-Info:  0.0 13.2    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[16] (3,27) -> (3,27)
+Info:  0.3 12.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_23$CARRY.COUT
+Info:  0.0 12.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[16] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_22$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 13.5  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_22$CARRY.COUT
-Info:  0.0 13.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[17] (3,27) -> (3,27)
+Info:  0.3 12.3  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_22$CARRY.COUT
+Info:  0.0 12.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[17] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_21$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 13.8  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_21$CARRY.COUT
-Info:  0.0 13.8    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[18] (3,27) -> (3,27)
+Info:  0.3 12.6  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_21$CARRY.COUT
+Info:  0.0 12.6    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[18] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_20$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 14.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_20$CARRY.COUT
-Info:  0.0 14.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[19] (3,27) -> (3,27)
+Info:  0.3 12.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_20$CARRY.COUT
+Info:  0.0 12.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[19] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_19$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 14.3  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_19$CARRY.COUT
-Info:  0.0 14.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[20] (3,27) -> (3,27)
+Info:  0.3 13.1  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_19$CARRY.COUT
+Info:  0.0 13.1    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[20] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_18$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 14.6  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_18$CARRY.COUT
-Info:  0.0 14.6    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[21] (3,27) -> (3,27)
+Info:  0.3 13.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_18$CARRY.COUT
+Info:  0.0 13.4    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[21] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_17$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 14.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_17$CARRY.COUT
-Info:  0.0 14.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[22] (3,27) -> (3,27)
+Info:  0.3 13.7  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_17$CARRY.COUT
+Info:  0.0 13.7    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[22] (3,26) -> (3,26)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_16$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 15.2  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_16$CARRY.COUT
-Info:  0.6 15.7    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[23] (3,27) -> (3,28)
+Info:  0.3 14.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_16$CARRY.COUT
+Info:  0.6 14.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[23] (3,26) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_15$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 16.0  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_15$CARRY.COUT
-Info:  0.0 16.0    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[24] (3,28) -> (3,28)
+Info:  0.3 14.8  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_15$CARRY.COUT
+Info:  0.0 14.8    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[24] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_14$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 16.3  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_14$CARRY.COUT
-Info:  0.0 16.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[25] (3,28) -> (3,28)
+Info:  0.3 15.1  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_14$CARRY.COUT
+Info:  0.0 15.1    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[25] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_13$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 16.5  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_13$CARRY.COUT
-Info:  0.0 16.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[26] (3,28) -> (3,28)
+Info:  0.3 15.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_13$CARRY.COUT
+Info:  0.0 15.4    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[26] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_12$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 16.8  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_12$CARRY.COUT
-Info:  0.0 16.8    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[27] (3,28) -> (3,28)
+Info:  0.3 15.6  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_12$CARRY.COUT
+Info:  0.0 15.6    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[27] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_11$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 17.1  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_11$CARRY.COUT
-Info:  0.0 17.1    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[28] (3,28) -> (3,28)
+Info:  0.3 15.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_11$CARRY.COUT
+Info:  0.0 15.9    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[28] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_10$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 17.4  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_10$CARRY.COUT
-Info:  0.0 17.4    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[29] (3,28) -> (3,28)
+Info:  0.3 16.2  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_10$CARRY.COUT
+Info:  0.0 16.2    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[29] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_8$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 17.7  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_8$CARRY.COUT
-Info:  0.0 17.7    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[30] (3,28) -> (3,28)
+Info:  0.3 16.5  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_8$CARRY.COUT
+Info:  0.0 16.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[30] (3,27) -> (3,27)
 Info:                Sink init_SB_DFFE_Q_32_D_SB_CARRY_I1_7$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 17.9  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_7$CARRY.COUT
-Info:  0.6 18.5    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[31] (3,28) -> (3,29)
+Info:  0.3 16.7  Source init_SB_DFFE_Q_32_D_SB_CARRY_I1_7$CARRY.COUT
+Info:  0.6 17.3    Net init_SB_DFFE_Q_E_SB_LUT4_O_I3[31] (3,27) -> (3,28)
 Info:                Sink init_SB_DFFE_Q_E_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
-Info:  0.3 18.8  Source init_SB_DFFE_Q_E_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
-Info:  0.7 19.4    Net init_SB_DFFE_Q_E_SB_LUT4_O_I0[3] (3,29) -> (3,29)
+Info:  0.3 17.6  Source init_SB_DFFE_Q_E_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.7 18.2    Net init_SB_DFFE_Q_E_SB_LUT4_O_I0[3] (3,28) -> (3,28)
 Info:                Sink init_SB_DFFE_Q_E_SB_LUT4_O_LC.I3
 Info:                Defined in:
 Info:                  top.v:77.10-77.19
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:37.23-37.25
-Info:  0.9 20.3  Source init_SB_DFFE_Q_E_SB_LUT4_O_LC.O
-Info:  3.0 23.3    Net init_SB_DFFE_Q_E[2] (3,29) -> (5,30)
+Info:  0.9 19.1  Source init_SB_DFFE_Q_E_SB_LUT4_O_LC.O
+Info:  3.0 22.1    Net init_SB_DFFE_Q_E[2] (3,28) -> (5,30)
 Info:                Sink state_SB_DFFE_Q_E_SB_LUT4_O_LC.I3
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info:  0.9 24.1  Source state_SB_DFFE_Q_E_SB_LUT4_O_LC.O
-Info:  1.1 25.2    Net state_SB_DFFE_Q_E (5,30) -> (6,31)
+Info:  0.9 22.9  Source state_SB_DFFE_Q_E_SB_LUT4_O_LC.O
+Info:  1.1 24.0    Net state_SB_DFFE_Q_E (5,30) -> (6,31)
 Info:                Sink $gbuf_state_SB_DFFE_Q_E_$glb_ce.USER_SIGNAL_TO_GLOBAL_BUFFER
-Info:  1.6 26.8  Source $gbuf_state_SB_DFFE_Q_E_$glb_ce.GLOBAL_BUFFER_OUTPUT
-Info:  0.7 27.5    Net state_SB_DFFE_Q_E_$glb_ce (6,31) -> (7,28)
+Info:  1.6 25.6  Source $gbuf_state_SB_DFFE_Q_E_$glb_ce.GLOBAL_BUFFER_OUTPUT
+Info:  0.7 26.3    Net state_SB_DFFE_Q_E_$glb_ce (6,31) -> (5,24)
 Info:                Sink state_SB_DFFE_Q_32_D_SB_LUT4_O_LC.CEN
-Info:  0.1 27.6  Setup state_SB_DFFE_Q_32_D_SB_LUT4_O_LC.CEN
-Info: 15.3 ns logic, 12.4 ns routing
+Info:  0.1 26.4  Setup state_SB_DFFE_Q_32_D_SB_LUT4_O_LC.CEN
+Info: 15.3 ns logic, 11.2 ns routing
 
 Info: Critical path report for cross-domain path 'posedge CLK$SB_IO_IN_$glb_clk' -> '<async>':
 Info: curr total
-Info:  1.4  1.4  Source led_SB_DFFESR_Q_DFFLC.O
-Info:  1.8  3.2    Net led[0] (5,29) -> (5,29)
-Info:                Sink LED_R_SB_LUT4_O_LC.I3
+Info:  1.4  1.4  Source implicit_bram_inst.data_out_SB_LUT4_O_LC.O
+Info:  1.8  3.2    Net led[2] (4,29) -> (5,30)
+Info:                Sink LED_B_SB_LUT4_O_LC.I3
 Info:                Defined in:
 Info:                  top.v:36.14-36.17
-Info:  0.9  4.0  Source LED_R_SB_LUT4_O_LC.O
-Info:  2.4  6.4    Net LED_R$SB_IO_OUT (5,29) -> (6,31)
-Info:                Sink LED_R$sb_io.D_OUT_0
+Info:  0.9  4.0  Source LED_B_SB_LUT4_O_LC.O
+Info:  1.8  5.8    Net LED_B$SB_IO_OUT (5,30) -> (5,31)
+Info:                Sink LED_B$sb_io.D_OUT_0
 Info:                Defined in:
-Info:                  top.v:8.30-8.35
-Info: 2.3 ns logic, 4.2 ns routing
+Info:                  top.v:8.58-8.63
+Info: 2.3 ns logic, 3.5 ns routing
 
-Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 36.20 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 37.83 MHz (PASS at 12.00 MHz)
 
-Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>: 6.43 ns
+Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>: 5.79 ns
 
 Info: Slack histogram:
 Info:  legend: * represents 1 endpoint(s)
 Info:          + represents [1,1) endpoint(s)
-Info: [ 55710,  56929) |********************************* 
-Info: [ 56929,  58148) |********************************* 
-Info: [ 58148,  59367) | 
-Info: [ 59367,  60586) | 
-Info: [ 60586,  61805) | 
-Info: [ 61805,  63024) | 
-Info: [ 63024,  64243) | 
-Info: [ 64243,  65462) | 
-Info: [ 65462,  66681) |******** 
-Info: [ 66681,  67900) |********* 
-Info: [ 67900,  69119) |**************** 
-Info: [ 69119,  70338) |**************** 
-Info: [ 70338,  71557) |**************** 
-Info: [ 71557,  72776) |*********** 
-Info: [ 72776,  73995) |**************** 
-Info: [ 73995,  75214) |************* 
-Info: [ 75214,  76433) |***************** 
-Info: [ 76433,  77652) |************* 
-Info: [ 77652,  78871) |********************* 
-Info: [ 78871,  80090) |******************************* 
+Info: [ 56901,  58062) |********************************* 
+Info: [ 58062,  59223) |********************************* 
+Info: [ 59223,  60384) | 
+Info: [ 60384,  61545) | 
+Info: [ 61545,  62706) | 
+Info: [ 62706,  63867) | 
+Info: [ 63867,  65028) | 
+Info: [ 65028,  66189) | 
+Info: [ 66189,  67350) |********** 
+Info: [ 67350,  68511) |*********** 
+Info: [ 68511,  69672) |***************** 
+Info: [ 69672,  70833) |************ 
+Info: [ 70833,  71994) |****************** 
+Info: [ 71994,  73155) |********** 
+Info: [ 73155,  74316) |************** 
+Info: [ 74316,  75477) |************ 
+Info: [ 75477,  76638) |**************** 
+Info: [ 76638,  77799) |******************************** 
+Info: [ 77799,  78960) |***************** 
+Info: [ 78960,  80121) |********************* 
 
 Info: Program finished normally.
 icepack top.asc top.bin

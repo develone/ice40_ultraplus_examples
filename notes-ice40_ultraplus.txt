@@ -51,7 +51,7 @@ added pico-ice.pcf
 created top.bin
 created test-top.uf2
 created notes-bram.txt
-https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/bram/make_output.txt/#L2110-L2127
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/bram/make_output.txt/#L2070-L2085
 
 spi_hw:
 changed Makefile
