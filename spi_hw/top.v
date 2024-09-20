@@ -5,7 +5,7 @@
 //0x04 write leds (8bits LSB)
 //0x06 write vector, the computer will send 4 * 32bit values
 //0x07 read vector, the fpga will send 4 * 32bit values
-
+`default_nettype	none
 module top( input CLK, output LED_R, output LED_G, output LED_B, input SPI_SCK, input SPI_SS, input SPI_MOSI, output SPI_MISO);
 
    parameter NOP=0, INIT=1, WR_INVERTED=2, WR_LEDS=4, WR_VEC=6, RD_VEC=7;
@@ -44,6 +44,10 @@ module top( input CLK, output LED_R, output LED_G, output LED_B, input SPI_SCK, 
       .MO(spi_mosi), .SI(SPI_MOSI),
       .SCKI(SPI_SCK), .SCSNI(SPI_SS)
    );
+   reg spi_reset;
+   reg spi_wr_en;
+   reg [7:0] spi_wr_data;
+   reg spi_rd_ack;
 
    reg [2:0] led;
    reg is_spi_init; //waits the INIT command from the master

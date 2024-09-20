@@ -92,14 +92,6 @@ Successfully finished Verilog frontend.
 
 2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\top'.
 Generating RTLIL representation for module `\top'.
-Warning: wire '\spi_reset' is assigned in a block at top.v:68.7-68.20.
-Warning: wire '\spi_wr_en' is assigned in a block at top.v:69.7-69.20.
-Warning: wire '\spi_wr_data' is assigned in a block at top.v:70.7-70.22.
-Warning: wire '\spi_rd_ack' is assigned in a block at top.v:71.7-71.21.
-top.v:68: Warning: Identifier `\spi_reset' is implicitly declared.
-top.v:69: Warning: Identifier `\spi_wr_en' is implicitly declared.
-top.v:70: Warning: Identifier `\spi_wr_data' is implicitly declared.
-top.v:71: Warning: Identifier `\spi_rd_ack' is implicitly declared.
 
 2.3.1. Analyzing design hierarchy..
 Top module:  \top
@@ -131,7 +123,7 @@ Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosy
 Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:477$179 in module SB_DFFSS.
 Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:406$176 in module SB_DFFR.
 Marked 1 switch rules as full_case in process $proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:356$173 in module SB_DFFSR.
-Marked 13 switch rules as full_case in process $proc$top.v:87$388 in module top.
+Marked 13 switch rules as full_case in process $proc$top.v:91$388 in module top.
 Removed a total of 0 dead cases.
 
 2.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -264,44 +256,44 @@ Creating decoders for process `\SB_DFFE.$proc$/usr/local/bin/../share/yosys/ice4
 Creating decoders for process `\SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:0$170'.
 Creating decoders for process `\SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:271$169'.
 Creating decoders for process `\top.$proc$top.v:0$478'.
-Creating decoders for process `\top.$proc$top.v:87$388'.
-     1/48: $4$mem2bits$\command_data$top.v:250$384[7:0]$476
-     2/48: $3$mem2bits$\command_data$top.v:250$384[7:0]$473
-     3/48: $7$memwr$\data_vector$top.v:236$383_EN[7:0]$465
-     4/48: $7$memwr$\data_vector$top.v:236$383_DATA[7:0]$464
-     5/48: $7$memwr$\data_vector$top.v:236$383_ADDR[3:0]$463
-     6/48: $6$memwr$\data_vector$top.v:236$383_EN[7:0]$461
-     7/48: $6$memwr$\data_vector$top.v:236$383_DATA[7:0]$460
-     8/48: $6$memwr$\data_vector$top.v:236$383_ADDR[3:0]$459
-     9/48: $5$memwr$\data_vector$top.v:236$383_EN[7:0]$456
-    10/48: $5$memwr$\data_vector$top.v:236$383_DATA[7:0]$455
-    11/48: $5$memwr$\data_vector$top.v:236$383_ADDR[3:0]$454
-    12/48: $4$memwr$\data_vector$top.v:236$383_EN[7:0]$450
-    13/48: $4$memwr$\data_vector$top.v:236$383_DATA[7:0]$449
-    14/48: $4$memwr$\data_vector$top.v:236$383_ADDR[3:0]$448
-    15/48: $3$memwr$\data_vector$top.v:236$383_EN[7:0]$445
-    16/48: $3$memwr$\data_vector$top.v:236$383_DATA[7:0]$444
-    17/48: $3$memwr$\data_vector$top.v:236$383_ADDR[3:0]$443
-    18/48: $2$mem2bits$\command_data$top.v:250$384[7:0]$440
-    19/48: $2$memwr$\data_vector$top.v:236$383_EN[7:0]$439
-    20/48: $2$memwr$\data_vector$top.v:236$383_DATA[7:0]$438
-    21/48: $2$memwr$\data_vector$top.v:236$383_ADDR[3:0]$437
-    22/48: $2$memwr$\command_data$top.v:226$382_EN[7:0]$436
-    23/48: $2$memwr$\command_data$top.v:226$382_DATA[7:0]$435
-    24/48: $2$memwr$\command_data$top.v:226$382_ADDR[7:0]$434
-    25/48: $2$memwr$\command_data$top.v:208$381_EN[7:0]$431
-    26/48: $2$memwr$\command_data$top.v:208$381_DATA[7:0]$430
-    27/48: $2$memwr$\command_data$top.v:208$381_ADDR[7:0]$429
-    28/48: $1$mem2bits$\command_data$top.v:250$384[7:0]$408
-    29/48: $1$memwr$\data_vector$top.v:236$383_EN[7:0]$407
-    30/48: $1$memwr$\data_vector$top.v:236$383_DATA[7:0]$406
-    31/48: $1$memwr$\data_vector$top.v:236$383_ADDR[3:0]$405
-    32/48: $1$memwr$\command_data$top.v:226$382_EN[7:0]$404
-    33/48: $1$memwr$\command_data$top.v:226$382_DATA[7:0]$403
-    34/48: $1$memwr$\command_data$top.v:226$382_ADDR[7:0]$402
-    35/48: $1$memwr$\command_data$top.v:208$381_EN[7:0]$401
-    36/48: $1$memwr$\command_data$top.v:208$381_DATA[7:0]$400
-    37/48: $1$memwr$\command_data$top.v:208$381_ADDR[7:0]$399
+Creating decoders for process `\top.$proc$top.v:91$388'.
+     1/48: $4$mem2bits$\command_data$top.v:254$384[7:0]$476
+     2/48: $3$mem2bits$\command_data$top.v:254$384[7:0]$473
+     3/48: $7$memwr$\data_vector$top.v:240$383_EN[7:0]$465
+     4/48: $7$memwr$\data_vector$top.v:240$383_DATA[7:0]$464
+     5/48: $7$memwr$\data_vector$top.v:240$383_ADDR[3:0]$463
+     6/48: $6$memwr$\data_vector$top.v:240$383_EN[7:0]$461
+     7/48: $6$memwr$\data_vector$top.v:240$383_DATA[7:0]$460
+     8/48: $6$memwr$\data_vector$top.v:240$383_ADDR[3:0]$459
+     9/48: $5$memwr$\data_vector$top.v:240$383_EN[7:0]$456
+    10/48: $5$memwr$\data_vector$top.v:240$383_DATA[7:0]$455
+    11/48: $5$memwr$\data_vector$top.v:240$383_ADDR[3:0]$454
+    12/48: $4$memwr$\data_vector$top.v:240$383_EN[7:0]$450
+    13/48: $4$memwr$\data_vector$top.v:240$383_DATA[7:0]$449
+    14/48: $4$memwr$\data_vector$top.v:240$383_ADDR[3:0]$448
+    15/48: $3$memwr$\data_vector$top.v:240$383_EN[7:0]$445
+    16/48: $3$memwr$\data_vector$top.v:240$383_DATA[7:0]$444
+    17/48: $3$memwr$\data_vector$top.v:240$383_ADDR[3:0]$443
+    18/48: $2$mem2bits$\command_data$top.v:254$384[7:0]$440
+    19/48: $2$memwr$\data_vector$top.v:240$383_EN[7:0]$439
+    20/48: $2$memwr$\data_vector$top.v:240$383_DATA[7:0]$438
+    21/48: $2$memwr$\data_vector$top.v:240$383_ADDR[3:0]$437
+    22/48: $2$memwr$\command_data$top.v:230$382_EN[7:0]$436
+    23/48: $2$memwr$\command_data$top.v:230$382_DATA[7:0]$435
+    24/48: $2$memwr$\command_data$top.v:230$382_ADDR[7:0]$434
+    25/48: $2$memwr$\command_data$top.v:212$381_EN[7:0]$431
+    26/48: $2$memwr$\command_data$top.v:212$381_DATA[7:0]$430
+    27/48: $2$memwr$\command_data$top.v:212$381_ADDR[7:0]$429
+    28/48: $1$mem2bits$\command_data$top.v:254$384[7:0]$408
+    29/48: $1$memwr$\data_vector$top.v:240$383_EN[7:0]$407
+    30/48: $1$memwr$\data_vector$top.v:240$383_DATA[7:0]$406
+    31/48: $1$memwr$\data_vector$top.v:240$383_ADDR[3:0]$405
+    32/48: $1$memwr$\command_data$top.v:230$382_EN[7:0]$404
+    33/48: $1$memwr$\command_data$top.v:230$382_DATA[7:0]$403
+    34/48: $1$memwr$\command_data$top.v:230$382_ADDR[7:0]$402
+    35/48: $1$memwr$\command_data$top.v:212$381_EN[7:0]$401
+    36/48: $1$memwr$\command_data$top.v:212$381_DATA[7:0]$400
+    37/48: $1$memwr$\command_data$top.v:212$381_ADDR[7:0]$399
     38/48: $0\spi_stb[0:0]
     39/48: $0\counter_vector[3:0]
     40/48: $0\data_to_send[7:0]
@@ -361,47 +353,47 @@ Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/usr/lo
   created $dff cell `$procdff$1104' with positive edge clock.
 Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:271$169'.
   created $dff cell `$procdff$1105' with positive edge clock.
-Creating register for signal `\top.\state_spi' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\state_spi' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1106' with positive edge clock.
-Creating register for signal `\top.\spi_stb' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\spi_stb' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1107' with positive edge clock.
-Creating register for signal `\top.\spi_rw' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\spi_rw' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1108' with positive edge clock.
-Creating register for signal `\top.\spi_adr' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\spi_adr' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1109' with positive edge clock.
-Creating register for signal `\top.\spi_dati' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\spi_dati' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1110' with positive edge clock.
-Creating register for signal `\top.\led' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\led' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1111' with positive edge clock.
-Creating register for signal `\top.\is_spi_init' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\is_spi_init' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1112' with positive edge clock.
-Creating register for signal `\top.\counter_read' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\counter_read' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1113' with positive edge clock.
-Creating register for signal `\top.\counter_send' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\counter_send' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1114' with positive edge clock.
-Creating register for signal `\top.\data_to_send' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\data_to_send' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1115' with positive edge clock.
-Creating register for signal `\top.\counter_vector' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.\counter_vector' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1116' with positive edge clock.
-Creating register for signal `\top.$memwr$\command_data$top.v:208$381_ADDR' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\command_data$top.v:212$381_ADDR' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1117' with positive edge clock.
-Creating register for signal `\top.$memwr$\command_data$top.v:208$381_DATA' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\command_data$top.v:212$381_DATA' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1118' with positive edge clock.
-Creating register for signal `\top.$memwr$\command_data$top.v:208$381_EN' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\command_data$top.v:212$381_EN' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1119' with positive edge clock.
-Creating register for signal `\top.$memwr$\command_data$top.v:226$382_ADDR' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\command_data$top.v:230$382_ADDR' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1120' with positive edge clock.
-Creating register for signal `\top.$memwr$\command_data$top.v:226$382_DATA' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\command_data$top.v:230$382_DATA' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1121' with positive edge clock.
-Creating register for signal `\top.$memwr$\command_data$top.v:226$382_EN' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\command_data$top.v:230$382_EN' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1122' with positive edge clock.
-Creating register for signal `\top.$memwr$\data_vector$top.v:236$383_ADDR' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\data_vector$top.v:240$383_ADDR' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1123' with positive edge clock.
-Creating register for signal `\top.$memwr$\data_vector$top.v:236$383_DATA' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\data_vector$top.v:240$383_DATA' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1124' with positive edge clock.
-Creating register for signal `\top.$memwr$\data_vector$top.v:236$383_EN' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$memwr$\data_vector$top.v:240$383_EN' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1125' with positive edge clock.
-Creating register for signal `\top.$mem2bits$\command_data$top.v:250$384' using process `\top.$proc$top.v:87$388'.
+Creating register for signal `\top.$mem2bits$\command_data$top.v:254$384' using process `\top.$proc$top.v:91$388'.
   created $dff cell `$procdff$1126' with positive edge clock.
 
 2.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
@@ -462,8 +454,8 @@ Removing empty process `SB_DFFE.$proc$/usr/local/bin/../share/yosys/ice40/cells_
 Removing empty process `SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:0$170'.
 Removing empty process `SB_DFF.$proc$/usr/local/bin/../share/yosys/ice40/cells_sim.v:271$169'.
 Removing empty process `top.$proc$top.v:0$478'.
-Found and cleaned up 27 empty switches in `\top.$proc$top.v:87$388'.
-Removing empty process `top.$proc$top.v:87$388'.
+Found and cleaned up 27 empty switches in `\top.$proc$top.v:91$388'.
+Removing empty process `top.$proc$top.v:91$388'.
 Cleaned up 45 empty switches.
 
 2.4.12. Executing OPT_EXPR pass (perform const folding).
@@ -595,42 +587,42 @@ Removed 69 multiplexer ports.
     New ctrl vector for $pmux cell $procmux$1029: { $auto$opt_reduce.cc:134:opt_pmux$1139 $auto$opt_reduce.cc:134:opt_pmux$1137 }
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $procmux$610:
-      Old ports: A=8'00000000, B=$7$memwr$\data_vector$top.v:236$383_EN[7:0]$465, Y=$procmux$610_Y
+      Old ports: A=8'00000000, B=$7$memwr$\data_vector$top.v:240$383_EN[7:0]$465, Y=$procmux$610_Y
       New ports: A=1'0, B=$procmux$548_Y [0], Y=$procmux$610_Y [0]
       New connections: $procmux$610_Y [7:1] = { $procmux$610_Y [0] $procmux$610_Y [0] $procmux$610_Y [0] $procmux$610_Y [0] $procmux$610_Y [0] $procmux$610_Y [0] $procmux$610_Y [0] }
     Consolidated identical input bits for $mux cell $procmux$845:
-      Old ports: A=8'00000000, B=$2$memwr$\command_data$top.v:226$382_EN[7:0]$436, Y=$0$memwr$\command_data$top.v:226$382_EN[7:0]$394
-      New ports: A=1'0, B=$procmux$795_Y [0], Y=$0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0]
-      New connections: $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [7:1] = { $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:226$382_EN[7:0]$394 [0] }
+      Old ports: A=8'00000000, B=$2$memwr$\command_data$top.v:230$382_EN[7:0]$436, Y=$0$memwr$\command_data$top.v:230$382_EN[7:0]$394
+      New ports: A=1'0, B=$procmux$795_Y [0], Y=$0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0]
+      New connections: $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [7:1] = { $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] $0$memwr$\command_data$top.v:230$382_EN[7:0]$394 [0] }
     Consolidated identical input bits for $mux cell $procmux$855:
-      Old ports: A=8'00000000, B=$2$memwr$\command_data$top.v:208$381_EN[7:0]$431, Y=$0$memwr$\command_data$top.v:208$381_EN[7:0]$391
-      New ports: A=1'0, B=$procmux$814_Y [0], Y=$0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0]
-      New connections: $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [7:1] = { $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:208$381_EN[7:0]$391 [0] }
+      Old ports: A=8'00000000, B=$2$memwr$\command_data$top.v:212$381_EN[7:0]$431, Y=$0$memwr$\command_data$top.v:212$381_EN[7:0]$391
+      New ports: A=1'0, B=$procmux$814_Y [0], Y=$0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0]
+      New connections: $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [7:1] = { $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] $0$memwr$\command_data$top.v:212$381_EN[7:0]$391 [0] }
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $procmux$664:
-      Old ports: A=$6$memwr$\data_vector$top.v:236$383_EN[7:0]$461, B=8'00000000, Y=$procmux$664_Y
+      Old ports: A=$6$memwr$\data_vector$top.v:240$383_EN[7:0]$461, B=8'00000000, Y=$procmux$664_Y
       New ports: A=$procmux$610_Y [0], B=1'0, Y=$procmux$664_Y [0]
       New connections: $procmux$664_Y [7:1] = { $procmux$664_Y [0] $procmux$664_Y [0] $procmux$664_Y [0] $procmux$664_Y [0] $procmux$664_Y [0] $procmux$664_Y [0] $procmux$664_Y [0] }
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $procmux$709:
-      Old ports: A=$5$memwr$\data_vector$top.v:236$383_EN[7:0]$456, B=8'00000000, Y=$procmux$709_Y
+      Old ports: A=$5$memwr$\data_vector$top.v:240$383_EN[7:0]$456, B=8'00000000, Y=$procmux$709_Y
       New ports: A=$procmux$664_Y [0], B=1'0, Y=$procmux$709_Y [0]
       New connections: $procmux$709_Y [7:1] = { $procmux$709_Y [0] $procmux$709_Y [0] $procmux$709_Y [0] $procmux$709_Y [0] $procmux$709_Y [0] $procmux$709_Y [0] $procmux$709_Y [0] }
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $procmux$745:
-      Old ports: A=$4$memwr$\data_vector$top.v:236$383_EN[7:0]$450, B=8'00000000, Y=$procmux$745_Y
+      Old ports: A=$4$memwr$\data_vector$top.v:240$383_EN[7:0]$450, B=8'00000000, Y=$procmux$745_Y
       New ports: A=$procmux$709_Y [0], B=1'0, Y=$procmux$745_Y [0]
       New connections: $procmux$745_Y [7:1] = { $procmux$745_Y [0] $procmux$745_Y [0] $procmux$745_Y [0] $procmux$745_Y [0] $procmux$745_Y [0] $procmux$745_Y [0] $procmux$745_Y [0] }
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $procmux$777:
-      Old ports: A=8'00000000, B=$3$memwr$\data_vector$top.v:236$383_EN[7:0]$445, Y=$procmux$777_Y
+      Old ports: A=8'00000000, B=$3$memwr$\data_vector$top.v:240$383_EN[7:0]$445, Y=$procmux$777_Y
       New ports: A=1'0, B=$procmux$745_Y [0], Y=$procmux$777_Y [0]
       New connections: $procmux$777_Y [7:1] = { $procmux$777_Y [0] $procmux$777_Y [0] $procmux$777_Y [0] $procmux$777_Y [0] $procmux$777_Y [0] $procmux$777_Y [0] $procmux$777_Y [0] }
   Optimizing cells in module \top.
     Consolidated identical input bits for $mux cell $procmux$836:
-      Old ports: A=8'00000000, B=$2$memwr$\data_vector$top.v:236$383_EN[7:0]$439, Y=$0$memwr$\data_vector$top.v:236$383_EN[7:0]$397
-      New ports: A=1'0, B=$procmux$777_Y [0], Y=$0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0]
-      New connections: $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [7:1] = { $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:236$383_EN[7:0]$397 [0] }
+      Old ports: A=8'00000000, B=$2$memwr$\data_vector$top.v:240$383_EN[7:0]$439, Y=$0$memwr$\data_vector$top.v:240$383_EN[7:0]$397
+      New ports: A=1'0, B=$procmux$777_Y [0], Y=$0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0]
+      New connections: $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [7:1] = { $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] $0$memwr$\data_vector$top.v:240$383_EN[7:0]$397 [0] }
   Optimizing cells in module \top.
 Performed a total of 14 changes.
 
@@ -761,7 +753,7 @@ Adding EN signal on $procdff$1115 ($dff) from module top (D = $procmux$940_Y, Q 
 Adding EN signal on $procdff$1114 ($dff) from module top (D = $0\counter_send[7:0], Q = \counter_send).
 Adding EN signal on $procdff$1113 ($dff) from module top (D = $0\counter_read[7:0], Q = \counter_read).
 Adding EN signal on $procdff$1112 ($dff) from module top (D = 1'1, Q = \is_spi_init).
-Adding EN signal on $procdff$1111 ($dff) from module top (D = $memrd$\command_data$top.v:250$477_DATA [2:0], Q = \led).
+Adding EN signal on $procdff$1111 ($dff) from module top (D = $memrd$\command_data$top.v:254$477_DATA [2:0], Q = \led).
 Adding EN signal on $procdff$1110 ($dff) from module top (D = $0\spi_dati[7:0], Q = \spi_dati).
 Adding EN signal on $procdff$1109 ($dff) from module top (D = $0\spi_adr[7:0], Q = \spi_adr).
 Adding EN signal on $procdff$1108 ($dff) from module top (D = $0\spi_rw[0:0], Q = \spi_rw).
@@ -837,22 +829,22 @@ Optimizing module top.
 2.14. Executing WREDUCE pass (reducing word size of cells).
 Removed top 5 address bits (of 8) from memory init port top.$auto$proc_memwr.cc:45:proc_memwr$1127 (command_data).
 Removed top 5 address bits (of 8) from memory init port top.$auto$proc_memwr.cc:45:proc_memwr$1128 (command_data).
-Removed top 29 address bits (of 32) from memory read port top.$memrd$\command_data$top.v:230$446 (command_data).
-Removed top 29 address bits (of 32) from memory read port top.$memrd$\command_data$top.v:250$477 (command_data).
-Removed top 29 bits (of 32) from port B of cell top.$lt$top.v:159$421 ($lt).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:192$426 ($add).
-Removed top 24 bits (of 32) from port Y of cell top.$add$top.v:192$426 ($add).
-Removed top 3 bits (of 8) from port B of cell top.$eq$top.v:210$432 ($eq).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:223$441 ($add).
-Removed top 24 bits (of 32) from port Y of cell top.$add$top.v:223$441 ($add).
-Removed top 6 bits (of 8) from port B of cell top.$eq$top.v:230$447 ($eq).
-Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:232$453 ($eq).
-Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:234$458 ($eq).
-Removed top 29 bits (of 32) from port B of cell top.$lt$top.v:235$462 ($lt).
-Removed top 31 bits (of 32) from port B of cell top.$add$top.v:237$466 ($add).
-Removed top 28 bits (of 32) from port Y of cell top.$add$top.v:237$466 ($add).
-Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:239$468 ($eq).
-Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:246$472 ($eq).
+Removed top 29 address bits (of 32) from memory read port top.$memrd$\command_data$top.v:234$446 (command_data).
+Removed top 29 address bits (of 32) from memory read port top.$memrd$\command_data$top.v:254$477 (command_data).
+Removed top 29 bits (of 32) from port B of cell top.$lt$top.v:163$421 ($lt).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:196$426 ($add).
+Removed top 24 bits (of 32) from port Y of cell top.$add$top.v:196$426 ($add).
+Removed top 3 bits (of 8) from port B of cell top.$eq$top.v:214$432 ($eq).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:227$441 ($add).
+Removed top 24 bits (of 32) from port Y of cell top.$add$top.v:227$441 ($add).
+Removed top 6 bits (of 8) from port B of cell top.$eq$top.v:234$447 ($eq).
+Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:236$453 ($eq).
+Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:238$458 ($eq).
+Removed top 29 bits (of 32) from port B of cell top.$lt$top.v:239$462 ($lt).
+Removed top 31 bits (of 32) from port B of cell top.$add$top.v:241$466 ($add).
+Removed top 28 bits (of 32) from port Y of cell top.$add$top.v:241$466 ($add).
+Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:243$468 ($eq).
+Removed top 5 bits (of 8) from port B of cell top.$eq$top.v:250$472 ($eq).
 Removed top 5 bits (of 8) from mux cell top.$procmux$851 ($mux).
 Removed top 5 bits (of 8) from mux cell top.$procmux$863 ($mux).
 Removed top 5 bits (of 8) from port B of cell top.$procmux$1002_CMP0 ($eq).
@@ -869,10 +861,10 @@ Removed top 4 bits (of 8) from mux cell top.$procmux$1061 ($mux).
 Removed top 4 bits (of 8) from mux cell top.$procmux$1064 ($mux).
 Removed top 4 bits (of 8) from mux cell top.$procmux$1066 ($mux).
 Removed top 5 bits (of 8) from mux cell top.$procmux$807 ($mux).
-Removed top 5 bits (of 8) from wire top.$0$memwr$\command_data$top.v:208$381_ADDR[7:0]$389.
-Removed top 5 bits (of 8) from wire top.$0$memwr$\command_data$top.v:226$382_ADDR[7:0]$392.
-Removed top 5 bits (of 8) from wire top.$2$memwr$\command_data$top.v:208$381_ADDR[7:0]$429.
-Removed top 24 bits (of 32) from wire top.$add$top.v:192$426_Y.
+Removed top 5 bits (of 8) from wire top.$0$memwr$\command_data$top.v:212$381_ADDR[7:0]$389.
+Removed top 5 bits (of 8) from wire top.$0$memwr$\command_data$top.v:230$382_ADDR[7:0]$392.
+Removed top 5 bits (of 8) from wire top.$2$memwr$\command_data$top.v:212$381_ADDR[7:0]$429.
+Removed top 24 bits (of 32) from wire top.$add$top.v:196$426_Y.
 Removed top 4 bits (of 8) from wire top.$procmux$1051_Y.
 Removed top 4 bits (of 8) from wire top.$procmux$1061_Y.
 Removed top 4 bits (of 8) from wire top.$procmux$1064_Y.
@@ -906,19 +898,19 @@ Finding unused cells or wires in module \top..
 
 2.21. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module top:
-  creating $macc model for $add$top.v:192$426 ($add).
-  creating $macc model for $add$top.v:223$441 ($add).
-  creating $macc model for $add$top.v:237$466 ($add).
-  creating $alu model for $macc $add$top.v:237$466.
-  creating $alu model for $macc $add$top.v:223$441.
-  creating $alu model for $macc $add$top.v:192$426.
-  creating $alu model for $lt$top.v:159$421 ($lt): new $alu
-  creating $alu model for $lt$top.v:235$462 ($lt): new $alu
-  creating $alu cell for $lt$top.v:235$462: $auto$alumacc.cc:485:replace_alu$1242
-  creating $alu cell for $lt$top.v:159$421: $auto$alumacc.cc:485:replace_alu$1253
-  creating $alu cell for $add$top.v:192$426: $auto$alumacc.cc:485:replace_alu$1264
-  creating $alu cell for $add$top.v:223$441: $auto$alumacc.cc:485:replace_alu$1267
-  creating $alu cell for $add$top.v:237$466: $auto$alumacc.cc:485:replace_alu$1270
+  creating $macc model for $add$top.v:196$426 ($add).
+  creating $macc model for $add$top.v:227$441 ($add).
+  creating $macc model for $add$top.v:241$466 ($add).
+  creating $alu model for $macc $add$top.v:241$466.
+  creating $alu model for $macc $add$top.v:227$441.
+  creating $alu model for $macc $add$top.v:196$426.
+  creating $alu model for $lt$top.v:163$421 ($lt): new $alu
+  creating $alu model for $lt$top.v:239$462 ($lt): new $alu
+  creating $alu cell for $lt$top.v:239$462: $auto$alumacc.cc:485:replace_alu$1242
+  creating $alu cell for $lt$top.v:163$421: $auto$alumacc.cc:485:replace_alu$1253
+  creating $alu cell for $add$top.v:196$426: $auto$alumacc.cc:485:replace_alu$1264
+  creating $alu cell for $add$top.v:227$441: $auto$alumacc.cc:485:replace_alu$1267
+  creating $alu cell for $add$top.v:241$466: $auto$alumacc.cc:485:replace_alu$1270
   created 5 $alu and 0 $macc cells.
 
 2.22. Executing OPT pass (performing simple optimizations).
@@ -1136,9 +1128,9 @@ Finding identical cells in module `\top'.
 Removed a total of 1 cells.
 
 2.30.6. Executing OPT_DFF pass (perform DFF optimizations).
-Adding SRST signal on $auto$ff.cc:266:slice$1179 ($dffe) from module top (D = $add$top.v:223$441_Y [7:0], Q = \counter_read, rval = 8'00000000).
-Adding SRST signal on $auto$ff.cc:266:slice$1164 ($dffe) from module top (D = $add$top.v:192$426_Y, Q = \counter_send, rval = 8'00000000).
-Adding EN signal on $auto$ff.cc:266:slice$1144 ($dffe) from module top (D = $add$top.v:237$466_Y [3:0], Q = \counter_vector).
+Adding SRST signal on $auto$ff.cc:266:slice$1179 ($dffe) from module top (D = $add$top.v:227$441_Y [7:0], Q = \counter_read, rval = 8'00000000).
+Adding SRST signal on $auto$ff.cc:266:slice$1164 ($dffe) from module top (D = $add$top.v:196$426_Y, Q = \counter_send, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$1144 ($dffe) from module top (D = $add$top.v:241$466_Y [3:0], Q = \counter_vector).
 
 2.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
@@ -1664,9 +1656,9 @@ Removed 0 unused modules.
 === top ===
 
    Number of wires:                187
-   Number of wire bits:            708
+   Number of wire bits:            715
    Number of public wires:         187
-   Number of public wire bits:     708
+   Number of public wire bits:     715
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
@@ -1685,10 +1677,10 @@ Found and reported 0 problems.
 
 2.50. Executing JSON backend.
 
-Warnings: 9 unique messages, 9 total
-End of script. Logfile hash: 95dc0ed4d5, CPU: user 1.83s system 0.00s, MEM: 25.50 MB peak
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 957001f237, CPU: user 1.68s system 0.02s, MEM: 25.00 MB peak
 Yosys 0.33+79 (git sha1 b52f6cb19, gcc 12.2.0-14 -fPIC -Os)
-Time spent: 25% 13x read_verilog (0 sec), 19% 1x abc (0 sec), ...
+Time spent: 28% 13x read_verilog (0 sec), 20% 1x abc (0 sec), ...
 nextpnr-ice40 --up5k --package sg48 --json top.json --pcf pico-ice.pcf --asc top.asc
 Info: constrained 'CLK' to bel 'X12/Y31/io1'
 Info: constrained 'SPI_MOSI' to bel 'X23/Y0/io1'
@@ -1719,7 +1711,7 @@ Info: Promoting globals..
 Info: promoting CLK$SB_IO_IN (fanout 189)
 Info: Constraining chains...
 Info:        5 LCs used to legalise carry chains.
-Info: Checksum: 0xd6186e1d
+Info: Checksum: 0x813c8b15
 
 Info: Device utilisation:
 Info: 	         ICESTORM_LC:   407/ 5280     7%
@@ -1750,7 +1742,7 @@ Info:     at iteration #2, type ALL: wirelen solved = 253, spread = 1637, legal 
 Info:     at iteration #3, type ALL: wirelen solved = 298, spread = 1680, legal = 2138; time = 0.02s
 Info:     at iteration #4, type ALL: wirelen solved = 377, spread = 1460, legal = 2070; time = 0.02s
 Info:     at iteration #5, type ALL: wirelen solved = 422, spread = 1404, legal = 2091; time = 0.01s
-Info:     at iteration #6, type ALL: wirelen solved = 438, spread = 1295, legal = 1994; time = 0.02s
+Info:     at iteration #6, type ALL: wirelen solved = 438, spread = 1295, legal = 1994; time = 0.01s
 Info:     at iteration #7, type ALL: wirelen solved = 443, spread = 1190, legal = 1662; time = 0.01s
 Info:     at iteration #8, type ALL: wirelen solved = 496, spread = 1291, legal = 1580; time = 0.01s
 Info:     at iteration #9, type ALL: wirelen solved = 513, spread = 1308, legal = 1718; time = 0.01s
@@ -1767,7 +1759,7 @@ Info:     at iteration #19, type ALL: wirelen solved = 655, spread = 1204, legal
 Info:     at iteration #20, type ALL: wirelen solved = 707, spread = 1191, legal = 1505; time = 0.01s
 Info:     at iteration #21, type ALL: wirelen solved = 699, spread = 1110, legal = 1641; time = 0.01s
 Info:     at iteration #22, type ALL: wirelen solved = 672, spread = 1187, legal = 1471; time = 0.01s
-Info: HeAP Placer Time: 0.37s
+Info: HeAP Placer Time: 0.38s
 Info:   of which solving equations: 0.22s
 Info:   of which spreading cells: 0.02s
 Info:   of which strict legalisation: 0.07s
@@ -1820,18 +1812,18 @@ Info: [ 75735,  76645) |*********************+
 Info: [ 76645,  77555) |*****************+
 Info: [ 77555,  78465) |************+
 Info: [ 78465,  79375) |*******************************+
-Info: Checksum: 0x607afb0d
+Info: Checksum: 0x8c23e0a0
 
 Info: Routing..
 Info: Setting up routing queue.
 Info: Routing 1180 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:       1000 |      223        770 |  223   770 |       489|       0.34       0.34|
-Info:       1881 |      542       1312 |  319   542 |         0|       0.23       0.57|
+Info:       1000 |      223        770 |  223   770 |       489|       0.65       0.65|
+Info:       1881 |      542       1312 |  319   542 |         0|       0.54       1.19|
 Info: Routing complete.
-Info: Router1 time 0.57s
-Info: Checksum: 0x433a2cb2
+Info: Router1 time 1.19s
+Info: Checksum: 0x4a75637b
 
 Info: Critical path report for clock 'CLK$SB_IO_IN_$glb_clk' (posedge -> posedge):
 Info: curr total
@@ -1839,7 +1831,7 @@ Info:  1.4  1.4  Source counter_read_SB_DFFESR_Q_D_SB_LUT4_O_2_LC.O
 Info:  1.8  3.2    Net counter_read[5] (1,5) -> (2,6)
 Info:                Sink command_data[1]_SB_DFFE_Q_E_SB_LUT4_O_I3_SB_LUT4_I2_I3_SB_LUT4_O_1_LC.I1
 Info:                Defined in:
-Info:                  top.v:223.29-223.45
+Info:                  top.v:227.29-227.45
 Info:                  /usr/local/bin/../share/yosys/ice40/arith_map.v:33.23-33.24
 Info:  1.2  4.4  Source command_data[1]_SB_DFFE_Q_E_SB_LUT4_O_I3_SB_LUT4_I2_I3_SB_LUT4_O_1_LC.O
 Info:  1.8  6.1    Net command_data[1]_SB_DFFE_Q_E_SB_LUT4_O_I3_SB_LUT4_I2_I3[2] (2,6) -> (2,6)
@@ -1925,7 +1917,7 @@ Info:  1.4  1.4  Source led_SB_DFFE_Q_DFFLC.O
 Info:  3.7  5.1    Net led[2] (2,9) -> (2,18)
 Info:                Sink LED_B_SB_LUT4_O_LC.I3
 Info:                Defined in:
-Info:                  top.v:48.14-48.17
+Info:                  top.v:52.14-52.17
 Info:  0.9  6.0  Source LED_B_SB_LUT4_O_LC.O
 Info:  4.9 10.9    Net LED_B$SB_IO_OUT (2,18) -> (5,31)
 Info:                Sink LED_B$sb_io.D_OUT_0
