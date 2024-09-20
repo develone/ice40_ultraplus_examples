@@ -84,7 +84,7 @@ module top( input CLK, output LED_R, output LED_G, output LED_B, input SPI_SCK, 
       state_spi = INIT_SPICR0;
    end
 
-   always @(posedge clk)
+   always @(posedge CLK)
    begin
 
       //default
