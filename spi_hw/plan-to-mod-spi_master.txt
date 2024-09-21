@@ -1,0 +1,21 @@
+step 1: Need to modify pico-examples/spi/spi_master_slave/spi_master/spi_master.c
+	
+step 2:
+	Need to change the pins to pmod (cp pmod.pcf pico-ice.pcf) to use an external pico.
+
+	make VERBOSE=1 > make_output.txt 2>&1
+
+	bin2uf2 -o test-top.uf2
+
+	rm -f /media/devel/pico-ice
+
+	cp test-top.uf2 /media/devel/pico-ice	
+step 3:
+	Connect the external pico from step 1. to the pico-ice pmod.
+
+	program pico-ice with test-top.uf2 file from step 2.
+
+	program external pico with uf2 file from step 1.
+	
+	test that the external pico from step 1 to try turning on the Led.
+
