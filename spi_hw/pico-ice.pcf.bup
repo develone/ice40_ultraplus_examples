@@ -1,0 +1,15 @@
+ 
+set_io -nowarn CLK              35
+ 
+ 
+set_io SPI_MOSI 17
+set_io SPI_MISO 14
+ 
+set_io SPI_SCK 15
+set_io SPI_SS 16
+ 
+set_io -nowarn LED_G            39
+set_io -nowarn LED_B            40
+set_io -nowarn LED_R            41
+
+ 
