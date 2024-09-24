@@ -1,0 +1,73 @@
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/ 8 leddigits start counting.
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 tt.py /dev/ttyACM4 the red led on pico-ice turns on.
+
+tt.py 
+from pico_ice_spi import *
+import binascii
+
+# Open the port given as argument
+spi = PicoIceSpi(sys.argv[1])
+
+# Query the SRAM ID
+spi.command(spi.USE_FPGA)
+spi.write(b'\x01')
+#                1   2   3   4	 
+#spi.write(b'\x04\x00\x00\x00\xff')
+spi.write(b'\x04\x0f')
+#spi.done()
+
+
+spi.command(spi.USE_xxxx) turns on the chip-select pin xxxx
+
+spi.read()/spi.write() performs the IO
+
+spi.done deselect the chip-select pin
+
+So you should be able to see the red LED on when you select the FPGA Raspberry Pi GPIO 13
+
+
+starting with pi4-30 :~/virtual-python-xstools/ 
+
+cd virtual-python-xstools/
+
+. virt.sh
+ 
+with (env) devel@pi5-80:~/virtual-python-xstools/ 
+python3 -m pip install pexpect
+python3 -m pip install pyserial
+https://github.com/tinyvision-ai-inc/pico-ice-sdk/blob/main/examples/pico_usb_spi/pico_ice_spi.py
+
+https://github.com/tinyvision-ai-inc/pico-ice-sdk/blob/main/examples/pico_usb_spi/test.py --> (env) devel@pi5-80:~/virtual-python-xstools/pico-icetest1.py 
+
+test1.py 
+
+from pico_ice_spi import *
+import binascii
+
+# Open the port given as argument
+spi = PicoIceSpi(sys.argv[1])
+
+# Query the SRAM ID
+spi.command(spi.USE_SRAM)
+spi.write(b'\x9F\x00\x00\x00')
+id = spi.read(8)
+print('SRAM ID: ' + str(binascii.b2a_hex(id, ' ')))
+spi.done()
+
+# Query the FLASH ID
+spi.command(spi.USE_FLASH)
+spi.write(bytes(b'\xAB\x00\x00\x00'))
+id = spi.read(1)
+print('FLASH ID: ' + str(binascii.b2a_hex(id, ' ')))
+spi.done()
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 test1.py /dev/ttyACM2
+SRAM ID: b'00 00 00 00 00 00 00 00'
+FLASH ID: b'00'
