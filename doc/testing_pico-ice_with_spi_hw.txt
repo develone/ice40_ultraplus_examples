@@ -1,11 +1,63 @@
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/ 8 leddigits start counting.
+09/24/24
 
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2
+starting with pi4-30 :~/virtual-python-xstools/ 
 
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
+cd virtual-python-xstools/
 
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 tt.py /dev/ttyACM4 the red led on pico-ice turns on.
+. virt.sh
+ 
+with (env) devel@pi5-80:~/virtual-python-xstools/ 
+python3 -m pip install pexpect
+python3 -m pip install pyserial
 
+Need 2 files https://github.com/tinyvision-ai-inc/pico-ice-sdk/tree/main/examples/pico_usb_spi
+********************************************************************************
+		pico-ice-spi.py
+				import serial
+				import sys
+
+				class PicoIceSpi:
+			  USE_FPGA = 0x00
+    		USE_SRAM = 0x01
+    		USE_FLASH = 0x02
+
+    		def __init__(self, port):
+        	self.ser = serial.Serial(port)
+
+    		def write(self, buffer):
+        	for chunk in [buffer[i:i + 0x7F] for i in range(0, len(buffer), 0x7F)]:
+            self.ser.write(bytes([len(chunk) | (0 << 7)]))
+            self.ser.write(chunk)
+
+    		def read(self, length):
+        	buffer = bytearray()
+        	while length > 0:
+            self.ser.write(bytes([min(0x7F, length) | (1 << 7)]))
+            buffer.extend(self.ser.read(size=min(0x7F, length)))
+            length -= 0x7F
+        	return buffer
+
+    	def done(self):
+        self.ser.write(b'\x00')
+
+    	def command(self, byte):
+        self.ser.write([0x80, byte])
+********************************************************************************
+********************************************************************************
+		test.py
+				from pico_ice_spi import *
+				import binascii
+
+			# Open the port given as argument
+			spi = PicoIceSpi(sys.argv[1])
+
+			# Query the SRAM ID
+			spi.command(spi.USE_SRAM)
+			spi.write(b'\x9F\x00\x00\x00')
+			id = spi.read(8)
+			print('SRAM ID: ' + str(binascii.b2a_hex(id, ' ')))
+s			pi.done()
+********************************************************************************
 tt.py 
 from pico_ice_spi import *
 import binascii
@@ -21,6 +73,38 @@ spi.write(b'\x01')
 spi.write(b'\x04\x0f')
 #spi.done()
 
+********************************************************************************
+
+devel@pi5-80:~ $ cd virtual-python-xstools/
+
+devel@pi5-80:~/virtual-python-xstools $ . virtp.sh 
+
+(env) devel@pi5-80:~/virtual-python-xstools $
+
+(env) devel@pi5-80:~/virtual-python-xstools $ ls /dev/ttyACM*
+/dev/ttyACM0  /dev/ttyACM1  /dev/ttyACM2
+
+(env) devel@pi5-80:~/virtual-python-xstools $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/
+
+(env) devel@pi5-80:~/virtual-python-xstools $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
+
+(env) devel@pi5-80:~/virtual-python-xstools $ rm -f /media/devel/pico-ice/test-top.uf2 
+
+(env) devel@pi5-80:~/virtual-python-xstools $ cd pico-ice/
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 tt.py /dev/ttyACM2
+
+********************************************************************************
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/ 8 leddigits start counting.
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 tt.py /dev/ttyACM4 the red led on pico-ice turns on.
+
+
 
 spi.command(spi.USE_xxxx) turns on the chip-select pin xxxx
 
@@ -31,15 +115,7 @@ spi.done deselect the chip-select pin
 So you should be able to see the red LED on when you select the FPGA Raspberry Pi GPIO 13
 
 
-starting with pi4-30 :~/virtual-python-xstools/ 
 
-cd virtual-python-xstools/
-
-. virt.sh
- 
-with (env) devel@pi5-80:~/virtual-python-xstools/ 
-python3 -m pip install pexpect
-python3 -m pip install pyserial
 https://github.com/tinyvision-ai-inc/pico-ice-sdk/blob/main/examples/pico_usb_spi/pico_ice_spi.py
 
 https://github.com/tinyvision-ai-inc/pico-ice-sdk/blob/main/examples/pico_usb_spi/test.py --> (env) devel@pi5-80:~/virtual-python-xstools/pico-icetest1.py 
