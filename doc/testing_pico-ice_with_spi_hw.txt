@@ -1,6 +1,6 @@
-09/24/24
+09/24/24 09/25/24
 
-starting with pi4-30 :~/virtual-python-xstools/ 
+starting with pi4-30 :~/virtual-python-xstools/ python virtual environment
 
 cd virtual-python-xstools/
 
@@ -74,7 +74,9 @@ spi.write(b'\x04\x0f')
 #spi.done()
 
 ********************************************************************************
+The will use a python virtual environment
 
+pico_ice_default_firmware_v1.6.1.uf2 needs to installed on the rp2040. 
 devel@pi5-80:~ $ cd virtual-python-xstools/
 
 devel@pi5-80:~/virtual-python-xstools $ . virtp.sh 
@@ -84,27 +86,41 @@ devel@pi5-80:~/virtual-python-xstools $ . virtp.sh
 (env) devel@pi5-80:~/virtual-python-xstools $ ls /dev/ttyACM*
 /dev/ttyACM0  /dev/ttyACM1  /dev/ttyACM2
 
-(env) devel@pi5-80:~/virtual-python-xstools $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/
-
-(env) devel@pi5-80:~/virtual-python-xstools $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
-
-(env) devel@pi5-80:~/virtual-python-xstools $ rm -f /media/devel/pico-ice/test-top.uf2 
-
 (env) devel@pi5-80:~/virtual-python-xstools $ cd pico-ice/
+
+If you have the Xess 8 digit 7 segment display connected to pico-ice.
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/
+The 8 digit 7 segment display connected to pico-ice will start counting.
+
+if you don't have Xess 8 digit 7 segment display connected to pico-ice.
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/pico-ice/examples-tested-1_6_1/pico-ice/blue.uf2 /media/devel/pico-ice/
+The blue led will start blinking
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/blue.uf2
+
+test-top.uf2 was created from the verilog top.v found ice40_ultraplus_examples/spi_hw/top.v with the following commands (make clean, make, and bin2uf2 -o test-top.uf2 top.bin)
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
+
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2 
+
+The following command needs three prior commands to have been done in the devel@pi5-80:~/ice40_ultraplus_examples/spi_hw
+make clean 
+
+make
+
+bin2uf2 -o test-top.uf2 top.bin
 
 (env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 tt.py /dev/ttyACM2
 
+(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ deactivate
+
+devel@pi5-80:~/virtual-python-xstools/pico-ice $
+
 ********************************************************************************
-
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/pico-ice/leddigits/test-top.uf2  /media/devel/pico-ice/ 8 leddigits start counting.
-
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ rm -f /media/devel/pico-ice/test-top.uf2
-
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ cp ~/ice40_ultraplus_examples/spi_hw/test-top.uf2 /media/devel/pico-ice/
-
-(env) devel@pi5-80:~/virtual-python-xstools/pico-ice $ python3 tt.py /dev/ttyACM4 the red led on pico-ice turns on.
-
-
 
 spi.command(spi.USE_xxxx) turns on the chip-select pin xxxx
 
