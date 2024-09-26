@@ -71,6 +71,7 @@ added pico-ice.pcf
 created top.bin
 created test-top.uf2
 created notes-spi.txt
+https://github.com/develone/ice40_ultraplus_examples/blob/test-dev/spi/make_output.txt/#L1574-L1589
 
 dsp:
 changed Makefile
