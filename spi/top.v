@@ -9,7 +9,7 @@
 //0x05 read leds (16bits LSB)
 //0x06 write vector, the computer will send 4 * 24bit values
 //0x07 read vector, the fpga will send 4 * 24bit values
-
+`default_nettype	none
 module top( input CLK, output LED_R, output LED_G, output LED_B, input SPI_SCK, input SPI_SS, input SPI_MOSI, output SPI_MISO);
 
    reg spi_reset;
@@ -65,7 +65,7 @@ module top( input CLK, output LED_R, output LED_G, output LED_B, input SPI_SCK, 
       handle_data = 0;
    end
 
-   always @(posedge clk)
+   always @(posedge CLK)
    begin
 
       //defaults
