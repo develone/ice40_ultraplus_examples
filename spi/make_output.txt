@@ -93,7 +93,6 @@ Successfully finished Verilog frontend.
 
 2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\top'.
 Generating RTLIL representation for module `\top'.
-top.v:68: Warning: Identifier `\clk' is implicitly declared.
 
 2.3.1. Analyzing design hierarchy..
 Top module:  \top
@@ -509,8 +508,7 @@ Removed 5 unused cells and 189 unused wires.
 
 2.10. Executing CHECK pass (checking for obvious problems).
 Checking module top...
-Warning: Wire top.\clk is used but has no driver.
-Found and reported 1 problems.
+Found and reported 0 problems.
 
 2.11. Executing OPT pass (performing simple optimizations).
 
@@ -962,7 +960,7 @@ No more expansions possible.
 
 2.28.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
-<suppressed ~27 debug messages>
+<suppressed ~26 debug messages>
 
 2.28.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
@@ -970,16 +968,6 @@ Finding identical cells in module `\top'.
 Removed a total of 3 cells.
 
 2.28.3. Executing OPT_DFF pass (perform DFF optimizations).
-Handling const CLK on $procdff$816 ($dff) from module top (removing D path).
-Handling const CLK on $procdff$815 ($dff) from module top (removing D path).
-Handling const CLK on $procdff$810 ($dff) from module top (removing D path).
-Handling const CLK on $procdff$809 ($dff) from module top (removing D path).
-Handling const CLK on $procdff$808 ($dff) from module top (removing D path).
-Handling const CLK on $procdff$807 ($dff) from module top (removing D path).
-Handling const CLK on $auto$ff.cc:266:slice$832 ($dffe) from module top (removing D path).
-Handling const CLK on $auto$ff.cc:266:slice$831 ($dffe) from module top (removing D path).
-Handling const CLK on $auto$ff.cc:266:slice$830 ($sdff) from module top (removing D path).
-Handling const CLK on $auto$ff.cc:266:slice$827 ($dffe) from module top (removing D path).
 Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$854 ($dffe) from module top.
 Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$854 ($dffe) from module top.
 Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$854 ($dffe) from module top.
@@ -989,76 +977,36 @@ Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$854 ($dffe) from m
 
 2.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 45 unused cells and 74 unused wires.
-<suppressed ~48 debug messages>
+Removed 7 unused cells and 32 unused wires.
+<suppressed ~8 debug messages>
 
 2.28.5. Rerunning OPT passes. (Removed registers in this run.)
 
 2.28.6. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
-<suppressed ~25 debug messages>
 
 2.28.7. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.28.8. Executing OPT_DFF pass (perform DFF optimizations).
-Handling never-active EN on $auto$ff.cc:266:slice$842 ($sdffe) from module top (connecting SRST instead).
-Handling never-active EN on $auto$ff.cc:266:slice$840 ($dffe) from module top (removing D path).
-Handling never-active EN on $auto$ff.cc:266:slice$839 ($sdffe) from module top (connecting SRST instead).
-Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$839 ($dffe) from module top.
-Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$842 ($dffe) from module top.
 
 2.28.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 3 unused cells and 7 unused wires.
-<suppressed ~4 debug messages>
 
-2.28.10. Rerunning OPT passes. (Removed registers in this run.)
-
-2.28.11. Executing OPT_EXPR pass (perform const folding).
-Optimizing module top.
-<suppressed ~4 debug messages>
-
-2.28.12. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\top'.
-Removed a total of 0 cells.
-
-2.28.13. Executing OPT_DFF pass (perform DFF optimizations).
-Removing never-active SRST on $auto$ff.cc:266:slice$875 ($sdffe) from module top.
-Removing never-active SRST on $auto$ff.cc:266:slice$851 ($sdffe) from module top.
-Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$851 ($dffe) from module top.
-
-2.28.14. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \top..
-Removed 1 unused cells and 5 unused wires.
-<suppressed ~2 debug messages>
-
-2.28.15. Rerunning OPT passes. (Removed registers in this run.)
-
-2.28.16. Executing OPT_EXPR pass (perform const folding).
-Optimizing module top.
-<suppressed ~4 debug messages>
-
-2.28.17. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\top'.
-Removed a total of 0 cells.
-
-2.28.18. Executing OPT_DFF pass (perform DFF optimizations).
-
-2.28.19. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \top..
-Removed 14 unused cells and 20 unused wires.
-<suppressed ~16 debug messages>
-
-2.28.20. Finished fast OPT passes.
+2.28.10. Finished fast OPT passes.
 
 2.29. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \vector in module \top:
+  created 5 $dff cells and 0 static cells of width 24.
+  read interface: 0 $dff and 7 $mux cells.
+  write interface: 5 write mux blocks.
 
 2.30. Executing OPT pass (performing simple optimizations).
 
 2.30.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
+<suppressed ~11 debug messages>
 
 2.30.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
@@ -1070,13 +1018,14 @@ Running muxtree optimizer on module \top..
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
-<suppressed ~4 debug messages>
+<suppressed ~21 debug messages>
 
 2.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \top.
-    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$853: { \spi_slave_inst.counter_read \spi_slave_inst.spi_clk_rising_edge $auto$opt_dff.cc:194:make_patterns_logic$844 }
+    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$873: { \spi_slave_inst.counter_read \spi_slave_inst.spi_clk_rising_edge $flatten\spi_slave_inst.$procmux$519_CMP $auto$rtlil.cc:2446:Not$871 }
+    New input vector for $reduce_and cell $auto$opt_dff.cc:220:make_patterns_logic$853: { \spi_slave_inst.counter_read \spi_slave_inst.spi_clk_rising_edge $flatten\spi_slave_inst.$procmux$519_CMP }
   Optimizing cells in module \top.
-Performed a total of 1 changes.
+Performed a total of 2 changes.
 
 2.30.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
@@ -1086,6 +1035,8 @@ Removed a total of 0 cells.
 
 2.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
+Removed 0 unused cells and 17 unused wires.
+<suppressed ~1 debug messages>
 
 2.30.8. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
@@ -1098,7 +1049,7 @@ Running muxtree optimizer on module \top..
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
-<suppressed ~4 debug messages>
+<suppressed ~21 debug messages>
 
 2.30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \top.
@@ -1109,14 +1060,47 @@ Finding identical cells in module `\top'.
 Removed a total of 0 cells.
 
 2.30.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\vector[4]$978 ($dff) from module top (D = \spi_recv_data_reg [31:8], Q = \vector[4]).
+Adding EN signal on $memory\vector[3]$976 ($dff) from module top (D = \spi_recv_data_reg [31:8], Q = \vector[3]).
+Adding EN signal on $memory\vector[2]$974 ($dff) from module top (D = \spi_recv_data_reg [31:8], Q = \vector[2]).
+Adding EN signal on $memory\vector[1]$972 ($dff) from module top (D = \spi_recv_data_reg [31:8], Q = \vector[1]).
+Adding EN signal on $memory\vector[0]$970 ($dff) from module top (D = \spi_recv_data_reg [31:8], Q = \vector[0]).
 
 2.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
+Removed 5 unused cells and 5 unused wires.
+<suppressed ~6 debug messages>
 
 2.30.15. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
 
-2.30.16. Finished OPT passes. (There is nothing left to do.)
+2.30.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.30.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+2.30.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.30.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.30.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.30.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.30.23. Finished OPT passes. (There is nothing left to do.)
 
 2.31. Executing ICE40_WRAPCARRY pass (wrap carries).
 
@@ -1158,39 +1142,48 @@ Successfully finished Verilog frontend.
 2.32.3. Continuing TECHMAP pass.
 Using extmapper simplemap for cells of type $reduce_bool.
 Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $and.
 Using extmapper simplemap for cells of type $ne.
 Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_80_ice40_alu for cells of type $alu.
-Using extmapper simplemap for cells of type $not.
-Using extmapper simplemap for cells of type $dffe.
-Using extmapper simplemap for cells of type $reduce_or.
-Using extmapper simplemap for cells of type $mux.
-Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
 Using extmapper simplemap for cells of type $eq.
+Using template $paramod$cc1e387d9d5ac1d3f6e6bed180038d9c0ac48d0c\_90_pmux for cells of type $pmux.
 Using extmapper simplemap for cells of type $dff.
-Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$821d2886e47353e724eaca46af4992e9c3e6ac1d\_80_ice40_alu for cells of type $alu.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$d1615bf4e5e328245ffd1550e5fe105901cda77b\_90_alu for cells of type $alu.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_80_ice40_alu for cells of type $alu.
 Using extmapper simplemap for cells of type $logic_or.
-Using extmapper simplemap for cells of type $and.
 Using extmapper simplemap for cells of type $pos.
 Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
 No more expansions possible.
-<suppressed ~155 debug messages>
+<suppressed ~509 debug messages>
 
 2.33. Executing OPT pass (performing simple optimizations).
 
 2.33.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
-<suppressed ~64 debug messages>
+<suppressed ~237 debug messages>
 
 2.33.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
-<suppressed ~21 debug messages>
-Removed a total of 7 cells.
+<suppressed ~162 debug messages>
+Removed a total of 54 cells.
 
 2.33.3. Executing OPT_DFF pass (perform DFF optimizations).
 
 2.33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 4 unused cells and 71 unused wires.
+Removed 4 unused cells and 255 unused wires.
 <suppressed ~5 debug messages>
 
 2.33.5. Finished fast OPT passes.
@@ -1198,11 +1191,13 @@ Removed 4 unused cells and 71 unused wires.
 2.34. Executing ICE40_OPT pass (performing simple optimizations).
 
 2.34.1. Running ICE40 specific optimizations.
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$886.slice[0].carry: CO=$auto$alumacc.cc:485:replace_alu$886.BB [0]
+Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$919.slice[0].carry: CO=\vec_ptr [0]
 Optimized $__ICE40_CARRY_WRAPPER cell back to logic (without SB_CARRY) top.$auto$alumacc.cc:485:replace_alu$922.slice[0].carry: CO=\spi_slave_inst.counter_read [0]
 
 2.34.2. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
-<suppressed ~1 debug messages>
+<suppressed ~49 debug messages>
 
 2.34.3. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
@@ -1212,6 +1207,8 @@ Removed a total of 0 cells.
 
 2.34.5. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
 
 2.34.6. Rerunning OPT passes. (Removed registers in this run.)
 
@@ -1260,16 +1257,20 @@ Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
 Successfully finished Verilog frontend.
 
 2.36.2. Continuing TECHMAP pass.
-Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
 Using template \$_DFF_P_ for cells of type $_DFF_P_.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+Using template \$_SDFFCE_PP0P_ for cells of type $_SDFFCE_PP0P_.
+Using template \$_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template \$_SDFFCE_PP1P_ for cells of type $_SDFFCE_PP1P_.
 No more expansions possible.
-<suppressed ~67 debug messages>
+<suppressed ~366 debug messages>
 
 2.37. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
 <suppressed ~2 debug messages>
 
 2.38. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping top.$auto$alumacc.cc:485:replace_alu$919.slice[0].carry ($lut).
 Mapping top.$auto$alumacc.cc:485:replace_alu$922.slice[0].carry ($lut).
 
 2.39. Executing ICE40_OPT pass (performing simple optimizations).
@@ -1278,18 +1279,18 @@ Mapping top.$auto$alumacc.cc:485:replace_alu$922.slice[0].carry ($lut).
 
 2.39.2. Executing OPT_EXPR pass (perform const folding).
 Optimizing module top.
-<suppressed ~16 debug messages>
+<suppressed ~32 debug messages>
 
 2.39.3. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\top'.
-<suppressed ~3 debug messages>
-Removed a total of 1 cells.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
 
 2.39.4. Executing OPT_DFF pass (perform DFF optimizations).
 
 2.39.5. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \top..
-Removed 0 unused cells and 220 unused wires.
+Removed 0 unused cells and 1687 unused wires.
 <suppressed ~1 debug messages>
 
 2.39.6. Rerunning OPT passes. (Removed registers in this run.)
@@ -1325,7 +1326,7 @@ No more expansions possible.
 2.41. Executing ABC pass (technology mapping using ABC).
 
 2.41.1. Extracting gate netlist of module `\top' to `<abc-temp-dir>/input.blif'..
-Extracted 88 gates and 115 wires to a netlist network with 25 inputs and 9 outputs.
+Extracted 643 gates and 945 wires to a netlist network with 300 inputs and 116 outputs.
 
 2.41.1.1. Executing ABC.
 Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
@@ -1347,20 +1348,20 @@ ABC: + if
 ABC: + mfs2 
 ABC: + lutpack -S 1 
 ABC: + dress <abc-temp-dir>/input.blif 
-ABC: Total number of equiv classes                =      18.
-ABC: Participating nodes from both networks       =      38.
-ABC: Participating nodes from the first network   =      17. (  77.27 % of nodes)
-ABC: Participating nodes from the second network  =      21. (  95.45 % of nodes)
-ABC: Node pairs (any polarity)                    =      17. (  77.27 % of names can be moved)
-ABC: Node pairs (same polarity)                   =      15. (  68.18 % of names can be moved)
-ABC: Total runtime =     0.03 sec
+ABC: Total number of equiv classes                =     191.
+ABC: Participating nodes from both networks       =     404.
+ABC: Participating nodes from the first network   =     190. (  63.55 % of nodes)
+ABC: Participating nodes from the second network  =     214. (  71.57 % of nodes)
+ABC: Node pairs (any polarity)                    =     190. (  63.55 % of names can be moved)
+ABC: Node pairs (same polarity)                   =     168. (  56.19 % of names can be moved)
+ABC: Total runtime =     0.04 sec
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 2.41.1.2. Re-integrating ABC results.
-ABC RESULTS:              $lut cells:       21
-ABC RESULTS:        internal signals:       81
-ABC RESULTS:           input signals:       25
-ABC RESULTS:          output signals:        9
+ABC RESULTS:              $lut cells:      298
+ABC RESULTS:        internal signals:      529
+ABC RESULTS:           input signals:      300
+ABC RESULTS:          output signals:      116
 Removing temp directory.
 
 2.42. Executing ICE40_WRAPCARRY pass (wrap carries).
@@ -1394,36 +1395,39 @@ Successfully finished Verilog frontend.
 2.43.2. Continuing TECHMAP pass.
 No more expansions possible.
 <suppressed ~22 debug messages>
-Removed 1 unused cells and 83 unused wires.
+Removed 7 unused cells and 535 unused wires.
 
 2.44. Executing OPT_LUT pass (optimize LUTs).
 Discovering LUTs.
-Number of LUTs:       25
-  2-LUT                2
-  3-LUT               11
-  4-LUT               12
-  with \SB_CARRY    (#0)    3
-  with \SB_CARRY    (#1)    3
+Number of LUTs:      309
+  1-LUT               33
+  2-LUT               32
+  3-LUT               77
+  4-LUT              167
+  with \SB_CARRY    (#0)    9
+  with \SB_CARRY    (#1)   10
 
 Eliminating LUTs.
-Number of LUTs:       25
-  2-LUT                2
-  3-LUT               11
-  4-LUT               12
-  with \SB_CARRY    (#0)    3
-  with \SB_CARRY    (#1)    3
+Number of LUTs:      309
+  1-LUT               33
+  2-LUT               32
+  3-LUT               77
+  4-LUT              167
+  with \SB_CARRY    (#0)    9
+  with \SB_CARRY    (#1)   10
 
 Combining LUTs.
-Number of LUTs:       25
-  2-LUT                2
-  3-LUT               11
-  4-LUT               12
-  with \SB_CARRY    (#0)    3
-  with \SB_CARRY    (#1)    3
+Number of LUTs:      308
+  1-LUT               33
+  2-LUT               31
+  3-LUT               77
+  4-LUT              167
+  with \SB_CARRY    (#0)    9
+  with \SB_CARRY    (#1)   10
 
 Eliminated 0 LUTs.
-Combined 0 LUTs.
-<suppressed ~166 debug messages>
+Combined 1 LUTs.
+<suppressed ~1889 debug messages>
 
 2.45. Executing TECHMAP pass (map to technology primitives).
 
@@ -1433,27 +1437,66 @@ Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
 2.45.2. Continuing TECHMAP pass.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
-Using template $paramod$179512a187da069f3b79ef6612a41e494e7d54b6\$lut for cells of type $lut.
-Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
-Using template $paramod$cc08dba3aac8677e797984bdf18a09dd37547dd3\$lut for cells of type $lut.
-Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
-Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
-Using template $paramod$951a688ae57d2311342f77219e5d334ec29a8aa3\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
+Using template $paramod$608f40069c27841a5b3bdf03643a34bdc8974072\$lut for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
+Using template $paramod$a54d8b8d2c90a828ee71c2d82e7e1612992a7ab8\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$279a8d961e6b2ded8450bee8ed637cb9efa31f02\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$368887f60ccee882960866ce81cb4250106048b1\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$b4f15f202f50520dbc381cd0880ac94f830f05a8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10110000 for cells of type $lut.
+Using template $paramod$e053a22d78e6bd5ea33183ea69976f0db741be0e\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00111010 for cells of type $lut.
+Using template $paramod$6b0849254d6c87461fb93e37cc18f089f61eb912\$lut for cells of type $lut.
+Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
 Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
-Using template $paramod$ae9b8abdb4f811ce37985dd5106af9cd21223954\$lut for cells of type $lut.
+Using template $paramod$e0bde73e598487237493c8a43ca52c95a3727354\$lut for cells of type $lut.
 Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod$bb4fff1cc3b827238aa40993cafede1c5beecbe3\$lut for cells of type $lut.
+Using template $paramod$c227f721a44fefdada39f6c9acbbd79680d6e12a\$lut for cells of type $lut.
+Using template $paramod$41326ad8644342a66dfb051d050f2b6fbf15015b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100000 for cells of type $lut.
+Using template $paramod$441de597d9318495d3225f370c9f7379b3b0fd0d\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10010000 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1110 for cells of type $lut.
+Using template $paramod$c471af5667a682bd131a5b479e58e470d1b2b7cd\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0111 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11010011 for cells of type $lut.
+Using template $paramod$de3d8c0ac9a85f776878d56395b6e0bf04ae72e7\$lut for cells of type $lut.
+Using template $paramod$bdb7f9ed72fd4f5c7ad81c376f2d8a5c72a0098d\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
+Using template $paramod$6ce363283ffa804146f8335d594e2323248e0a20\$lut for cells of type $lut.
+Using template $paramod$38f9bf4dd2329347b8471f0a98443dd323386889\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11000010 for cells of type $lut.
+Using template $paramod$ae9b8abdb4f811ce37985dd5106af9cd21223954\$lut for cells of type $lut.
+Using template $paramod$ea0faad69a26c91786a25961ea149d0e0961eb1f\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11000101 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$724ffb8289c5b8b880df76c6f3c56ad6c062fae0\$lut for cells of type $lut.
+Using template $paramod$f54c0ffd7b041ca43eac7710ab19c0666d826c22\$lut for cells of type $lut.
+Using template $paramod$d4fae2c0d9ad2966369cd4e39b81c71bcd1327c9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$a4df2b5be2b644499880e088a11556935f22b401\$lut for cells of type $lut.
+Using template $paramod$b1f01d1a6442cce30a958d756be8bbcf976f6dba\$lut for cells of type $lut.
+Using template $paramod$b4d0f4738a5ce50c7f36c2aa2ecc09cfb874f2b6\$lut for cells of type $lut.
 Using template $paramod$ce352c9f2c315e2e2df4d954b177f8b51f7dfcc0\$lut for cells of type $lut.
+Using template $paramod$d6cf0a4b6f6ccd87588da28c41b5b6c258da2509\$lut for cells of type $lut.
+Using template $paramod$03ebaa21b7709abb99593ddc6ded49b85a14688d\$lut for cells of type $lut.
 No more expansions possible.
-<suppressed ~210 debug messages>
-Removed 0 unused cells and 54 unused wires.
+<suppressed ~1000 debug messages>
+Removed 0 unused cells and 695 unused wires.
 
 2.46. Executing AUTONAME pass.
-Renamed 246 objects in module top (13 iterations).
-<suppressed ~93 debug messages>
+Renamed 10484 objects in module top (70 iterations).
+<suppressed ~871 debug messages>
 
 2.47. Executing HIERARCHY pass (managing design hierarchy).
 
@@ -1468,18 +1511,21 @@ Removed 0 unused modules.
 
 === top ===
 
-   Number of wires:                 65
-   Number of wire bits:            370
-   Number of public wires:          65
-   Number of public wire bits:     370
+   Number of wires:                255
+   Number of wire bits:           1054
+   Number of public wires:         255
+   Number of public wire bits:    1054
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 73
-     SB_CARRY                        3
-     SB_DFF                         11
-     SB_DFFE                        34
-     SB_LUT4                        25
+   Number of cells:                666
+     SB_CARRY                       14
+     SB_DFF                         47
+     SB_DFFE                       292
+     SB_DFFESR                       3
+     SB_DFFESS                       1
+     SB_DFFSR                        1
+     SB_LUT4                       308
 
 2.49. Executing CHECK pass (checking for obvious problems).
 Checking module top...
@@ -1487,10 +1533,9 @@ Found and reported 0 problems.
 
 2.50. Executing JSON backend.
 
-Warnings: 2 unique messages, 2 total
-End of script. Logfile hash: 3c28655a30, CPU: user 1.21s system 0.02s, MEM: 20.50 MB peak
+End of script. Logfile hash: 416ea6d9c4, CPU: user 1.77s system 0.01s, MEM: 26.50 MB peak
 Yosys 0.33+79 (git sha1 b52f6cb19, gcc 12.2.0-14 -fPIC -Os)
-Time spent: 41% 13x read_verilog (0 sec), 13% 1x abc (0 sec), ...
+Time spent: 26% 13x read_verilog (0 sec), 16% 1x abc (0 sec), ...
 nextpnr-ice40 --up5k --package sg48 --json top.json --pcf pico-ice.pcf --asc top.asc
 Info: constrained 'CLK' to bel 'X12/Y31/io1'
 Info: constrained 'SPI_MOSI' to bel 'X23/Y0/io1'
@@ -1504,30 +1549,33 @@ Info: constrained 'LED_R' to bel 'X6/Y31/io0'
 Info: Packing constants..
 Info: Packing IOs..
 Info: Packing LUT-FFs..
-Info:       19 LCs used as LUT4 only
-Info:        6 LCs used as LUT4 and DFF
+Info:      220 LCs used as LUT4 only
+Info:       88 LCs used as LUT4 and DFF
 Info: Packing non-LUT FFs..
-Info:       39 LCs used as DFF only
+Info:      256 LCs used as DFF only
 Info: Packing carries..
-Info:        1 LCs used as CARRY only
+Info:        7 LCs used as CARRY only
 Info: Packing indirect carry+LUT pairs...
-Info:        0 LUTs merged into carry LCs
+Info:        5 LUTs merged into carry LCs
 Info: Packing RAMs..
 Info: Placing PLLs..
 Info: Packing special functions..
 Info: Packing PLLs..
 Info: Promoting globals..
-Info: promoting CLK$SB_IO_IN (fanout 45)
+Info: promoting CLK$SB_IO_IN (fanout 344)
+Info: promoting spi_rd_data_available_buf_SB_LUT4_I2_O [cen] (fanout 32)
+Info: promoting spi_slave_inst.rd_data_available_SB_LUT4_I2_O [cen] (fanout 32)
 Info: promoting spi_slave_inst.counter_read_SB_DFF_Q_1_D_SB_LUT4_O_I2[3] [cen] (fanout 31)
+Info: promoting handle_data_SB_LUT4_I3_1_O_SB_LUT4_I3_O [cen] (fanout 24)
 Info: Constraining chains...
-Info:        1 LCs used to legalise carry chains.
-Info: Checksum: 0xdfa5b7ce
+Info:        3 LCs used to legalise carry chains.
+Info: Checksum: 0xf3da8f3c
 
 Info: Device utilisation:
-Info: 	         ICESTORM_LC:    68/ 5280     1%
+Info: 	         ICESTORM_LC:   571/ 5280    10%
 Info: 	        ICESTORM_RAM:     0/   30     0%
 Info: 	               SB_IO:     8/   96     8%
-Info: 	               SB_GB:     2/    8    25%
+Info: 	               SB_GB:     5/    8    62%
 Info: 	        ICESTORM_PLL:     0/    1     0%
 Info: 	         SB_WARMBOOT:     0/    1     0%
 Info: 	        ICESTORM_DSP:     0/    8     0%
@@ -1541,158 +1589,155 @@ Info: 	         SB_RGBA_DRV:     0/    1     0%
 Info: 	      ICESTORM_SPRAM:     0/    4     0%
 
 Info: Placed 8 cells based on constraints.
-Info: Creating initial analytic placement for 65 cells, random placement wirelen = 1849.
-Info:     at initial placer iter 0, wirelen = 53
-Info:     at initial placer iter 1, wirelen = 52
-Info:     at initial placer iter 2, wirelen = 52
-Info:     at initial placer iter 3, wirelen = 52
-Info: Running main analytical placer, max placement attempts per cell = 10000.
-Info:     at iteration #1, type ICESTORM_LC: wirelen solved = 52, spread = 131, legal = 139; time = 0.00s
-Info:     at iteration #1, type SB_GB: wirelen solved = 138, spread = 138, legal = 142; time = 0.00s
-Info:     at iteration #1, type ALL: wirelen solved = 52, spread = 128, legal = 135; time = 0.00s
-Info:     at iteration #2, type ICESTORM_LC: wirelen solved = 64, spread = 181, legal = 188; time = 0.00s
-Info:     at iteration #2, type SB_GB: wirelen solved = 188, spread = 188, legal = 188; time = 0.00s
-Info:     at iteration #2, type ALL: wirelen solved = 66, spread = 113, legal = 129; time = 0.00s
-Info:     at iteration #3, type ICESTORM_LC: wirelen solved = 66, spread = 115, legal = 113; time = 0.00s
-Info:     at iteration #3, type SB_GB: wirelen solved = 110, spread = 110, legal = 113; time = 0.00s
-Info:     at iteration #3, type ALL: wirelen solved = 69, spread = 113, legal = 118; time = 0.00s
-Info:     at iteration #4, type ICESTORM_LC: wirelen solved = 68, spread = 116, legal = 107; time = 0.00s
-Info:     at iteration #4, type SB_GB: wirelen solved = 103, spread = 103, legal = 107; time = 0.00s
-Info:     at iteration #4, type ALL: wirelen solved = 63, spread = 116, legal = 121; time = 0.00s
-Info:     at iteration #5, type ICESTORM_LC: wirelen solved = 70, spread = 111, legal = 119; time = 0.00s
-Info:     at iteration #5, type SB_GB: wirelen solved = 115, spread = 115, legal = 119; time = 0.00s
-Info:     at iteration #5, type ALL: wirelen solved = 73, spread = 116, legal = 121; time = 0.00s
-Info:     at iteration #6, type ICESTORM_LC: wirelen solved = 66, spread = 112, legal = 119; time = 0.00s
-Info:     at iteration #6, type SB_GB: wirelen solved = 115, spread = 115, legal = 119; time = 0.00s
-Info:     at iteration #6, type ALL: wirelen solved = 68, spread = 116, legal = 122; time = 0.00s
-Info:     at iteration #7, type ICESTORM_LC: wirelen solved = 73, spread = 115, legal = 107; time = 0.00s
-Info:     at iteration #7, type SB_GB: wirelen solved = 103, spread = 103, legal = 107; time = 0.00s
-Info:     at iteration #7, type ALL: wirelen solved = 74, spread = 117, legal = 135; time = 0.00s
-Info:     at iteration #8, type ICESTORM_LC: wirelen solved = 67, spread = 113, legal = 109; time = 0.00s
-Info:     at iteration #8, type SB_GB: wirelen solved = 106, spread = 106, legal = 109; time = 0.00s
-Info:     at iteration #8, type ALL: wirelen solved = 66, spread = 114, legal = 124; time = 0.00s
-Info: HeAP Placer Time: 0.03s
-Info:   of which solving equations: 0.02s
-Info:   of which spreading cells: 0.00s
-Info:   of which strict legalisation: 0.00s
+Info: Creating initial analytic placement for 559 cells, random placement wirelen = 12676.
+Info:     at initial placer iter 0, wirelen = 216
+Info:     at initial placer iter 1, wirelen = 186
+Info:     at initial placer iter 2, wirelen = 179
+Info:     at initial placer iter 3, wirelen = 184
+Info: Running main analytical placer, max placement attempts per cell = 42632.
+Info:     at iteration #1, type ALL: wirelen solved = 179, spread = 2164, legal = 3380; time = 0.02s
+Info:     at iteration #2, type ALL: wirelen solved = 223, spread = 1599, legal = 3104; time = 0.02s
+Info:     at iteration #3, type ALL: wirelen solved = 345, spread = 1343, legal = 3272; time = 0.02s
+Info:     at iteration #4, type ALL: wirelen solved = 446, spread = 1368, legal = 2694; time = 0.02s
+Info:     at iteration #5, type ALL: wirelen solved = 546, spread = 1203, legal = 3089; time = 0.02s
+Info:     at iteration #6, type ALL: wirelen solved = 590, spread = 1180, legal = 3075; time = 0.02s
+Info:     at iteration #7, type ALL: wirelen solved = 613, spread = 1228, legal = 3144; time = 0.02s
+Info:     at iteration #8, type ALL: wirelen solved = 710, spread = 1139, legal = 3422; time = 0.02s
+Info:     at iteration #9, type ALL: wirelen solved = 617, spread = 1175, legal = 3201; time = 0.02s
+Info: HeAP Placer Time: 0.25s
+Info:   of which solving equations: 0.09s
+Info:   of which spreading cells: 0.01s
+Info:   of which strict legalisation: 0.11s
 
 Info: Running simulated annealing placer for refinement.
-Info:   at iteration #1: temp = 0.000000, timing cost = 22, wirelen = 118
-Info:   at iteration #4: temp = 0.000000, timing cost = 18, wirelen = 100 
-Info: SA placement time 0.01s
+Info:   at iteration #1: temp = 0.000000, timing cost = 43, wirelen = 2694
+Info:   at iteration #5: temp = 0.000000, timing cost = 91, wirelen = 1921
+Info:   at iteration #10: temp = 0.000000, timing cost = 114, wirelen = 1727
+Info:   at iteration #15: temp = 0.000000, timing cost = 78, wirelen = 1652
+Info:   at iteration #20: temp = 0.000000, timing cost = 117, wirelen = 1603
+Info:   at iteration #20: temp = 0.000000, timing cost = 113, wirelen = 1604 
+Info: SA placement time 0.32s
 
-Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 66.56 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 45.54 MHz (PASS at 12.00 MHz)
 
-Info: Max delay <async>                       -> posedge CLK$SB_IO_IN_$glb_clk: 2.99 ns
-Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>                      : 3.15 ns
+Info: Max delay <async>                       -> posedge CLK$SB_IO_IN_$glb_clk: 5.06 ns
+Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>                      : 9.91 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 1 endpoint(s)
-Info:          + represents [1,1) endpoint(s)
-Info: [ 68309,  68862) |*********************** 
-Info: [ 68862,  69415) | 
-Info: [ 69415,  69968) |******** 
-Info: [ 69968,  70521) | 
-Info: [ 70521,  71074) |*** 
-Info: [ 71074,  71627) | 
-Info: [ 71627,  72180) | 
-Info: [ 72180,  72733) | 
-Info: [ 72733,  73286) |**** 
-Info: [ 73286,  73839) |******* 
-Info: [ 73839,  74392) |* 
-Info: [ 74392,  74945) |** 
-Info: [ 74945,  75498) | 
-Info: [ 75498,  76051) |****** 
-Info: [ 76051,  76604) | 
-Info: [ 76604,  77157) | 
-Info: [ 77157,  77710) | 
-Info: [ 77710,  78263) | 
-Info: [ 78263,  78816) | 
-Info: [ 78816,  79369) |************************************* 
-Info: Checksum: 0xdac0c42c
+Info:  legend: * represents 2 endpoint(s)
+Info:          + represents [1,2) endpoint(s)
+Info: [ 61375,  62311) |****+
+Info: [ 62311,  63247) |************+
+Info: [ 63247,  64183) |***********+
+Info: [ 64183,  65119) |*** 
+Info: [ 65119,  66055) |*+
+Info: [ 66055,  66991) |**********+
+Info: [ 66991,  67927) |*************************+
+Info: [ 67927,  68863) |*******************************+
+Info: [ 68863,  69799) |*******************************+
+Info: [ 69799,  70735) |**********+
+Info: [ 70735,  71671) |***************+
+Info: [ 71671,  72607) |+
+Info: [ 72607,  73543) |******+
+Info: [ 73543,  74479) |**+
+Info: [ 74479,  75415) |********+
+Info: [ 75415,  76351) |****** 
+Info: [ 76351,  77287) |********* 
+Info: [ 77287,  78223) |************************************************************ 
+Info: [ 78223,  79159) |*************************************************+
+Info: [ 79159,  80095) |**+
+Info: Checksum: 0xf622ae7b
 
 Info: Routing..
 Info: Setting up routing queue.
-Info: Routing 153 arcs.
+Info: Routing 1543 arcs.
 Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
 Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
-Info:        154 |        1        150 |    1   150 |         0|       0.04       0.04|
+Info:       1000 |       95        899 |   95   899 |       664|       0.22       0.22|
+Info:       2000 |      330       1655 |  235   756 |        11|       0.21       0.43|
+Info:       2010 |      330       1666 |    0    11 |         0|       0.01       0.44|
 Info: Routing complete.
-Info: Router1 time 0.04s
-Info: Checksum: 0x4b44b33d
+Info: Router1 time 0.44s
+Info: Checksum: 0x3881a53e
 
 Info: Critical path report for clock 'CLK$SB_IO_IN_$glb_clk' (posedge -> posedge):
 Info: curr total
-Info:  1.4  1.4  Source spi_slave_inst.rd_data_local_SB_DFFE_Q_26_DFFLC.O
-Info:  1.8  3.2    Net spi_slave_inst.rd_data_local[5] (21,3) -> (21,2)
-Info:                Sink spi_slave_inst.state_rd_SB_LUT4_I3_I0_SB_LUT4_O_1_LC.I0
+Info:  1.4  1.4  Source vec_ptr_SB_DFF_Q_D_SB_LUT4_O_5_LC.O
+Info:  3.5  4.9    Net led_SB_LUT4_I0_1_O_SB_LUT4_O_1_I2[2] (8,12) -> (10,8)
+Info:                Sink handle_data_SB_LUT4_I3_1_O_SB_LUT4_I1_O_SB_LUT4_O_I0_SB_LUT4_O_2_I0_SB_LUT4_O_1_LC.I1
 Info:                Defined in:
-Info:                  top.v:26.14-30.5
-Info:                  spi_slave.v:27.15-27.28
-Info:  1.3  4.4  Source spi_slave_inst.state_rd_SB_LUT4_I3_I0_SB_LUT4_O_1_LC.O
-Info:  1.8  6.2    Net spi_slave_inst.state_rd_SB_LUT4_I3_I0[0] (21,2) -> (22,2)
-Info:                Sink spi_slave_inst.state_rd_SB_LUT4_I3_LC.I0
-Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info:  1.3  7.5  Source spi_slave_inst.state_rd_SB_LUT4_I3_LC.O
-Info:  1.8  9.2    Net spi_slave_inst.state_rd_SB_DFFE_Q_E_SB_LUT4_O_I1[0] (22,2) -> (23,2)
-Info:                Sink spi_slave_inst.state_rd_SB_DFFE_Q_E_SB_LUT4_O_LC.I1
+Info:                  top.v:40.14-40.21
+Info:  1.2  6.1  Source handle_data_SB_LUT4_I3_1_O_SB_LUT4_I1_O_SB_LUT4_O_I0_SB_LUT4_O_2_I0_SB_LUT4_O_1_LC.O
+Info:  3.0  9.1    Net handle_data_SB_LUT4_I3_1_O_SB_LUT4_I1_O_SB_LUT4_O_I0_SB_LUT4_O_2_I0[2] (10,8) -> (8,6)
+Info:                Sink led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_I3_SB_LUT4_O_I0_SB_LUT4_O_2_LC.I2
 Info:                Defined in:
 Info:                  /usr/local/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info:  1.2 10.5  Source spi_slave_inst.state_rd_SB_DFFE_Q_E_SB_LUT4_O_LC.O
-Info:  2.3 12.8    Net spi_slave_inst.state_rd_SB_DFFE_Q_E (23,2) -> (23,2)
-Info:                Sink spi_slave_inst.state_rd_SB_DFFE_Q_DFFLC.CEN
-Info:  0.1 12.9  Setup spi_slave_inst.state_rd_SB_DFFE_Q_DFFLC.CEN
-Info: 5.3 ns logic, 7.6 ns routing
+Info:  1.2 10.3  Source led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_I3_SB_LUT4_O_I0_SB_LUT4_O_2_LC.O
+Info:  1.8 12.0    Net led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_I3_SB_LUT4_O_I0[0] (8,6) -> (8,5)
+Info:                Sink led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_I3_SB_LUT4_O_LC.I0
+Info:                Defined in:
+Info:                  /usr/local/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.3 13.3  Source led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_I3_SB_LUT4_O_LC.O
+Info:  2.8 16.2    Net led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_I3[3] (8,5) -> (13,5)
+Info:                Sink led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_LC.I3
+Info:                Defined in:
+Info:                  /usr/local/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.8 17.0  Setup led_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_O_20_LC.I3
+Info: 5.9 ns logic, 11.1 ns routing
 
 Info: Critical path report for cross-domain path '<async>' -> 'posedge CLK$SB_IO_IN_$glb_clk':
 Info: curr total
-Info:  0.0  0.0  Source SPI_SS$sb_io.D_IN_0
-Info:  1.8  1.8    Net SPI_SS$SB_IO_IN (24,0) -> (24,1)
-Info:                Sink spi_slave_inst.spi_ss_reg_SB_DFF_Q_1_DFFLC.I0
+Info:  0.0  0.0  Source SPI_SCK$sb_io.D_IN_0
+Info:  4.2  4.2    Net SPI_SCK$SB_IO_IN (24,0) -> (14,1)
+Info:                Sink spi_slave_inst.spi_clk_reg_SB_DFF_Q_1_DFFLC.I0
 Info:                Defined in:
 Info:                  top.v:26.14-30.5
-Info:                  spi_slave.v:5.38-5.44
-Info:  1.2  3.0  Setup spi_slave_inst.spi_ss_reg_SB_DFF_Q_1_DFFLC.I0
-Info: 1.2 ns logic, 1.8 ns routing
+Info:                  spi_slave.v:5.18-5.25
+Info:  1.2  5.5  Setup spi_slave_inst.spi_clk_reg_SB_DFF_Q_1_DFFLC.I0
+Info: 1.2 ns logic, 4.2 ns routing
 
 Info: Critical path report for cross-domain path 'posedge CLK$SB_IO_IN_$glb_clk' -> '<async>':
 Info: curr total
-Info:  1.4  1.4  Source spi_slave_inst.miso_out_reg_SB_LUT4_I1_LC.O
-Info:  1.8  3.2    Net SPI_MISO$SB_IO_OUT (23,1) -> (23,0)
-Info:                Sink SPI_MISO$sb_io.D_OUT_0
+Info:  1.4  1.4  Source led_SB_DFFE_Q_1_DFFLC.O
+Info:  3.7  5.1    Net led[1] (5,10) -> (5,18)
+Info:                Sink LED_G_SB_LUT4_O_LC.I3
 Info:                Defined in:
-Info:                  /usr/local/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
-Info: 1.4 ns logic, 1.8 ns routing
+Info:                  top.v:32.14-32.17
+Info:  0.9  6.0  Source LED_G_SB_LUT4_O_LC.O
+Info:  4.9 10.9    Net LED_G$SB_IO_OUT (5,18) -> (4,31)
+Info:                Sink LED_G$sb_io.D_OUT_0
+Info:                Defined in:
+Info:                  top.v:13.45-13.50
+Info: 2.3 ns logic, 8.6 ns routing
 
-Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 77.43 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock 'CLK$SB_IO_IN_$glb_clk': 58.86 MHz (PASS at 12.00 MHz)
 
-Info: Max delay <async>                       -> posedge CLK$SB_IO_IN_$glb_clk: 2.99 ns
-Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>                      : 3.15 ns
+Info: Max delay <async>                       -> posedge CLK$SB_IO_IN_$glb_clk: 5.46 ns
+Info: Max delay posedge CLK$SB_IO_IN_$glb_clk -> <async>                      : 10.86 ns
 
 Info: Slack histogram:
-Info:  legend: * represents 1 endpoint(s)
-Info:          + represents [1,1) endpoint(s)
-Info: [ 70418,  70866) |** 
-Info: [ 70866,  71314) |* 
-Info: [ 71314,  71762) |******************************* 
-Info: [ 71762,  72210) | 
-Info: [ 72210,  72658) | 
-Info: [ 72658,  73106) |**** 
-Info: [ 73106,  73554) |*** 
-Info: [ 73554,  74002) |***** 
-Info: [ 74002,  74450) |* 
-Info: [ 74450,  74898) |* 
-Info: [ 74898,  75346) | 
-Info: [ 75346,  75794) | 
-Info: [ 75794,  76242) |****** 
-Info: [ 76242,  76690) | 
-Info: [ 76690,  77138) | 
-Info: [ 77138,  77586) | 
-Info: [ 77586,  78034) | 
-Info: [ 78034,  78482) | 
-Info: [ 78482,  78930) | 
-Info: [ 78930,  79378) |************************************* 
+Info:  legend: * represents 2 endpoint(s)
+Info:          + represents [1,2) endpoint(s)
+Info: [ 66344,  66995) |******************+
+Info: [ 66995,  67646) |*******************+
+Info: [ 67646,  68297) |**********************+
+Info: [ 68297,  68948) |************************************************+
+Info: [ 68948,  69599) |****************** 
+Info: [ 69599,  70250) |******************+
+Info: [ 70250,  70901) |*****+
+Info: [ 70901,  71552) |************************+
+Info: [ 71552,  72203) |******************+
+Info: [ 72203,  72854) |+
+Info: [ 72854,  73505) |******+
+Info: [ 73505,  74156) |****+
+Info: [ 74156,  74807) |********+
+Info: [ 74807,  75458) |****** 
+Info: [ 75458,  76109) |***+
+Info: [ 76109,  76760) |**+
+Info: [ 76760,  77411) |***********+
+Info: [ 77411,  78062) |**********************************************+
+Info: [ 78062,  78713) |*****************************+
+Info: [ 78713,  79364) |************************************************************ 
 
 Info: Program finished normally.
 icepack top.asc top.bin
